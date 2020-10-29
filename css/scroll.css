@@ -1,0 +1,15 @@
+.jspVerticalBar { width: 6px; }
+/* Styles specific to this particular page */
+html { overflow: auto; }
+#full-page-container { overflow: auto; }
+.scroll-pane { width: 100%; height: 200px; overflow: auto; }
+.horizontal-only { height: auto; max-height: 200px; }
+.jspDrag { background: #e78e08; }
+.jspTrack { background: #ffebce; }
+
+.jspHorizontalBar { display: none !important; }
+
+.jspPane {
+	overflow-x: hidden;
+	left: 0 !important;
+}

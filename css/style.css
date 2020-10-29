@@ -1,0 +1,4312 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+body {
+  background: black;
+  font-size: 14px;
+  line-height: 25px;
+  resize: 0;
+}
+
+input,
+textarea,
+button,
+select {
+  outline: none !important;
+  font-size: 14px;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #fc8621;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-family: "Raleway";
+}
+
+.pt-wrapper {
+  overflow: hidden;
+}
+
+.padding {
+  padding: 24px;
+}
+
+.pt-dtable {
+  display: table;
+}
+
+.pt-vmiddle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.w-60 {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.pt-pagination {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  display: table;
+  margin-top: 32px;
+}
+.pt-pagination li {
+  float: left;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  background: #fff;
+  box-shadow: 0 0 3px #eee;
+  margin: 3px;
+  text-align: center;
+  color: #ff9f0e;
+  border-radius: 50%;
+  font-family: "Raleway";
+}
+.pt-pagination li a {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  color: #ff9f0e;
+  font-family: "Raleway";
+}
+.pt-pagination li.pt-active {
+  background: #ff9f0e;
+  color: #fff;
+}
+.pt-pagination li.pt-disabled {
+  background: #f7f7f7;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="phone"],
+textarea,
+select,
+.bootstrap-select .btn {
+  border: 1px solid #f7f7f7;
+  border-bottom: 3px solid #fff3e0;
+  background: #fff;
+  width: 100%;
+  border-radius: 10px;
+  height: 44px;
+  padding: 12px;
+  font-family: "Raleway";
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+label {
+  font-family: "Raleway";
+  font-weight: 700;
+  margin: 0px 6px 2px;
+  display: block;
+  color: #666;
+}
+
+.pt-phone,
+.pt-country {
+  position: relative;
+}
+.pt-phone .pt-flags,
+.pt-country .pt-flags {
+  position: absolute;
+  top: 5px;
+  left: 6px;
+  z-index: 2;
+}
+.pt-phone .pt-flags .bootstrap-select .btn,
+.pt-country .pt-flags .bootstrap-select .btn {
+  height: 32px;
+  font-size: 12px;
+  line-height: 5px;
+  padding: 10px 4px;
+  border: 0;
+  background: #fff9f1;
+}
+.pt-phone .pt-flags .bootstrap-select li,
+.pt-country .pt-flags .bootstrap-select li {
+  font-size: 12px;
+}
+.pt-phone .inp,
+.pt-country .inp {
+  padding-left: 84px;
+}
+
+.pt-form-icon {
+  position: relative;
+  position: relative;
+}
+.pt-form-icon span {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+}
+.pt-form-icon input {
+  padding-left: 35px;
+}
+
+.form-control:focus {
+  border-color: #ff9f0e;
+  box-shadow: 0 0 6px rgba(255, 159, 14, 0.25);
+}
+
+.pt-rating {
+  margin-left: 6px;
+}
+.pt-rating input[type="radio"] {
+  -webkit-appearance: none;
+  margin: 0;
+  box-shadow: none;
+}
+.pt-rating input[type="radio"]:after {
+  content: "";
+  font-size: 22px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.pt-rating input[type="radio"]:invalid::after {
+  color: #ddd;
+}
+.pt-rating input[type="radio"]:valid {
+  color: #ff9f0e;
+}
+.pt-rating:hover input[type="radio"]:invalid:after {
+  color: #888;
+  font-weight: 400;
+}
+.pt-rating:hover input[type="radio"]:valid:after {
+  color: #ff9f0e;
+}
+.pt-rating
+  input[type="radio"]:checked
+  ~ input[type="radio"]:not(:checked)::after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  color: #ccc;
+}
+
+.pt-rating:hover input[type="radio"]:hover ~ input[type="radio"]:invalid::after,
+.pt-rating input[type="radio"]:focus ~ input[type="radio"]:invalid::after {
+  color: #ddd;
+}
+
+.bootstrap-select .btn {
+  line-height: 17px;
+}
+.bootstrap-select .bs-searchbox {
+  padding: 0 10px 10px;
+  border-bottom: 1px solid #eee;
+}
+.bootstrap-select input {
+  height: 38px;
+  border-radius: 3px;
+  border-bottom-width: 1px;
+  border-color: #eee;
+}
+.bootstrap-select .dropdown-menu li a {
+  font-size: 14px;
+}
+.bootstrap-select .dropdown-menu li a span {
+  text-align: left !important;
+}
+.bootstrap-select .dropdown-menu li a:hover {
+  background: #fff1e6;
+  color: #ab6d0e;
+}
+.bootstrap-select .dropdown-menu li a.active {
+  background-color: #ff9f0e;
+}
+.bootstrap-select .dropdown-menu .selected span.check-mark {
+  top: 10px !important;
+  font-size: 11px;
+  color: #fc8621;
+}
+
+.alert-danger {
+  color: #da747d;
+  background-color: #fff5f6;
+  border-color: #fff2f3;
+}
+
+.alert-success {
+  color: #57b56d;
+  background-color: #f0fdf3;
+  border-color: #e4f9e9;
+}
+
+.alert-warning {
+  color: #d4b458;
+  background-color: #fffbef;
+  border-color: #fff5d5;
+}
+
+.alert-info {
+  color: #2a98ab;
+  background-color: #f1fdff;
+  border-color: #d7f6fb;
+}
+
+.modal-dialog .close {
+  background: #fff1e6;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.24);
+  margin: 0;
+}
+
+.pt-breadcrumb-p {
+  background-color: #ff9f0e;
+  position: relative;
+  /* border-top: 2px solid #db942a; */
+  box-shadow: 0px 4px 12px 0px #0000002b inset;
+  margin-bottom: 68px;
+  padding: 30px 0;
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+  height: 124px;
+  line-height: 40px;
+}
+.pt-breadcrumb-p:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../img/bg2.png);
+  height: 164px;
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+  width: 100%;
+  opacity: 0.4;
+  filter: blur(1.2px);
+}
+.pt-breadcrumb-p h3,
+.pt-breadcrumb-p p {
+  margin: 0;
+  position: relative;
+  text-shadow: 0px 2px 9px rgba(0, 0, 0, 0.23);
+  font-family: "Raleway";
+}
+
+.pt-btn {
+  font-size: 16px;
+  width: auto;
+  height: 38px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 4px;
+  background: #ff9f0e;
+  color: #fff;
+  margin-left: 6px;
+  box-shadow: 0 3px 10px rgba(255, 159, 14, 0.5);
+  padding: 0 24px;
+  font-family: "Raleway";
+  font-weight: 700;
+  position: relative;
+  border: 0;
+}
+.pt-btn i {
+  margin-right: 3px;
+}
+
+.tips {
+  padding: 0;
+  width: 32px;
+}
+.tips i {
+  margin: 0;
+}
+.tips b {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -30px;
+  right: -8px;
+  background: rgba(0, 0, 0, 0.48);
+  font-size: 10px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 8px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.tips b:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 24px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.48);
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+.tips:hover b {
+  visibility: visible;
+  opacity: 1;
+  bottom: -26px;
+}
+
+.input-group.file-caption-main .btn {
+  font-size: 10px;
+  padding: 0 10px;
+  height: 34px;
+  line-height: 34px;
+}
+
+.file-input .file-caption {
+  height: 34px;
+  line-height: 34px;
+  font-size: 12px;
+}
+
+.file-input .file-caption i {
+  margin-right: 4px;
+}
+
+.file-preview,
+.file-drop-zone {
+  min-height: 182px;
+}
+
+.file-input .input-group-btn {
+  margin-left: 4px;
+}
+
+.file-thumbnail-footer .file-footer-caption {
+  line-height: 16px;
+}
+.file-thumbnail-footer .file-thumb-progress {
+  display: none;
+}
+.file-thumbnail-footer .file-footer-buttons .btn {
+  padding: 0;
+}
+.file-thumbnail-footer .file-actions {
+  margin: 0;
+}
+
+.file-preview-frame {
+  display: block;
+  height: 162px;
+  width: 134px !important;
+}
+
+.file-preview-image {
+  max-width: 100%;
+}
+
+.file-footer-caption {
+  width: 100%;
+}
+
+.progress {
+  margin: 12px 0;
+}
+
+.file-live-thumbs:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.pt-image-append {
+  margin-top: 12px;
+}
+.pt-image-append:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.pt-image-append div {
+  width: 139px;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  margin: 10px 8px 0 0;
+  border-radius: 5px;
+  box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.11);
+  float: left;
+}
+.pt-image-append div img {
+  width: 100%;
+  min-height: 100%;
+}
+.pt-image-append div span {
+  position: absolute;
+  font-size: 10px;
+  padding: 0;
+  text-align: center;
+  top: 6px;
+  left: 6px;
+  cursor: pointer;
+  color: #fff;
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 24px;
+}
+.pt-image-append div span i {
+  margin: 0;
+}
+.pt-image-append div span:nth-of-type(2) {
+  left: 34px;
+}
+.pt-image-append div span:nth-of-type(3) {
+  left: 62px;
+}
+
+.file-upload {
+  display: block;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+.file-upload .file-select {
+  display: block;
+  border: 2px solid #ff9f0e;
+  color: #ed930b;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  text-align: left;
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.file-upload .file-select .file-select-button {
+  background: #ff9f0e;
+  padding: 0 10px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+}
+
+.file-upload .file-select .file-select-name {
+  line-height: 40px;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.file-upload .file-select:hover {
+  border-color: #34495e;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.file-upload .file-select:hover .file-select-button {
+  background: #34495e;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.file-upload.active .file-select {
+  border-color: #3fa46a;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.file-upload.active .file-select .file-select-button {
+  background: #3fa46a;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.file-upload .file-select input[type="file"] {
+  z-index: 100;
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.file-upload .file-select.file-select-disabled {
+  opacity: 0.65;
+}
+
+.file-upload .file-select.file-select-disabled:hover {
+  cursor: default;
+  display: block;
+  border: 2px solid #dce4ec;
+  color: #34495e;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 5px;
+  text-align: left;
+  background: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.file-upload .file-select.file-select-disabled:hover .file-select-button {
+  background: #dce4ec;
+  color: #666666;
+  padding: 0 10px;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+}
+
+.file-upload .file-select.file-select-disabled:hover .file-select-name {
+  line-height: 40px;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.sresults {
+  position: relative;
+}
+.sresults .pt-drop {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  right: 0;
+  top: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.sresults .pt-drop li {
+  border-bottom: 1px solid #f7f7f7;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+.sresults .pt-drop li a {
+  display: block;
+  color: #333;
+}
+.sresults .pt-drop li:last-of-type {
+  border-bottom: 0;
+}
+.sresults .pt-drop .pt-thumb {
+  margin-left: 6px;
+}
+.sresults .pt-drop .pt-cnt {
+  font-size: 10px;
+  line-height: 15px;
+  padding: 7px;
+  margin-left: 42px;
+  color: #777;
+}
+.sresults .pt-drop .pt-cnt b {
+  font-weight: 700;
+  color: #fd5c5c;
+}
+.sresults .pt-drop .pt-cnt a {
+  color: #20b395;
+}
+.sresults .pt-drop.open {
+  top: 0px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.choice {
+  display: none;
+}
+
+.choice + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.choice + label:before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ddd;
+  margin-right: 8px;
+  border-radius: 50%;
+  transition: 0.3s;
+  background-position: center;
+  float: left;
+  margin-top: -2px;
+}
+
+.choice:checked + label:before {
+  border-color: #ff9f0e;
+  box-shadow: 0 0 0 4px #ff9f0e inset;
+}
+
+.choice[type="checkbox"] + label:before {
+  border-radius: 4px;
+}
+
+.choice[type="checkbox"]:checked + label:before {
+  box-shadow: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3e%3cpath fill='%23fff' d='M.3 14c-.2-.2-.3-.5-.3-.7s.1-.5.3-.7l1.4-1.4c.4-.4 1-.4 1.4 0l.1.1 5.5 5.9c.2.2.5.2.7 0L22.8 3.3h.1c.4-.4 1-.4 1.4 0l1.4 1.4c.4.4.4 1 0 1.4l-16 16.6c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3L.5 14.3.3 14z'/%3e%3c/svg%3e");
+  background-color: #ff9f0e;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.choice.custom + label {
+  position: relative;
+  padding: 0 12px;
+  margin: 0 4px 0 0;
+}
+.choice.custom + label b {
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 22px;
+  font-family: "Raleway";
+  color: #fff;
+  font-size: 12px;
+}
+.choice.custom + label b .pt-i {
+  background: #fff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  line-height: 22px;
+  box-shadow: 0 0 0 2px #eee, 0 0 0 3px #fff;
+  margin-right: 6px;
+}
+
+.choice.custom + label:before {
+  width: 100%;
+  min-height: 26px;
+  background: #ff9f0e;
+  border: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 55px;
+}
+
+.choice.custom[type="checkbox"]:checked + label {
+  color: #fff;
+}
+.choice.custom[type="checkbox"]:checked + label .pt-i {
+  background: #fff;
+  box-shadow: 0 0 0 2px #5f90fa, 0 0 0 3px #fff;
+  color: #5f90fa;
+}
+
+.choice.custom[type="checkbox"]:checked + label:before {
+  background-image: none;
+}
+
+.choice.custom[type="radio"]:checked + label,
+.choice.custom[type="radio"]:checked + label b {
+  color: #ff9f0e;
+  font-weight: 700;
+}
+
+.choice.custom[type="radio"]:checked + label:before {
+  background: #fff;
+}
+
+.tgl {
+  display: none;
+}
+.tgl,
+.tgl:after,
+.tgl:before,
+.tgl *,
+.tgl *:after,
+.tgl *:before,
+.tgl + .tgl-btn {
+  box-sizing: border-box;
+}
+.tgl::selection,
+.tgl:after::selection,
+.tgl:before::selection,
+.tgl *::selection,
+.tgl *:after::selection,
+.tgl *:before::selection,
+.tgl + .tgl-btn::selection {
+  background: none;
+}
+.tgl + .tgl-btn {
+  outline: 0;
+  display: block;
+  width: 40px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  float: left;
+}
+.tgl + .tgl-btn:after,
+.tgl + .tgl-btn:before {
+  position: relative;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.tgl + .tgl-btn:after {
+  left: 0;
+}
+.tgl + .tgl-btn:before {
+  display: none;
+}
+.tgl:checked + .tgl-btn:after {
+  left: 50%;
+}
+
+.tgl-light + .tgl-btn {
+  background: #f0f0f0;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all 0.4s ease;
+  margin: 3px 0px;
+}
+.tgl-light + .tgl-btn:after {
+  border-radius: 50%;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+.tgl-light:checked + .tgl-btn {
+  background: #ff9f0e;
+}
+
+.tgl-btn + label {
+  margin-left: 12px;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.tgl-ios + .tgl-btn {
+  background: #fbfbfb;
+  border-radius: 2em;
+  padding: 2px;
+  transition: all 0.4s ease;
+  border: 1px solid #e8eae9;
+}
+.tgl-ios + .tgl-btn:after {
+  border-radius: 2em;
+  background: #fbfbfb;
+  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    padding 0.3s ease, margin 0.3s ease;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
+}
+.tgl-ios + .tgl-btn:hover:after {
+  will-change: padding;
+}
+.tgl-ios + .tgl-btn:active {
+  box-shadow: inset 0 0 0 2em #e8eae9;
+}
+.tgl-ios + .tgl-btn:active:after {
+  padding-right: 0.8em;
+}
+.tgl-ios:checked + .tgl-btn {
+  background: #86d993;
+}
+.tgl-ios:checked + .tgl-btn:active {
+  box-shadow: none;
+}
+.tgl-ios:checked + .tgl-btn:active:after {
+  margin-left: -0.8em;
+}
+
+.tgl-skewed + .tgl-btn {
+  overflow: hidden;
+  transform: skew(-10deg);
+  backface-visibility: hidden;
+  transition: all 0.2s ease;
+  font-family: sans-serif;
+  background: #888;
+}
+.tgl-skewed + .tgl-btn:after,
+.tgl-skewed + .tgl-btn:before {
+  transform: skew(10deg);
+  display: inline-block;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  line-height: 2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+.tgl-skewed + .tgl-btn:after {
+  left: 100%;
+  content: attr(data-tg-on);
+}
+.tgl-skewed + .tgl-btn:before {
+  left: 0;
+  content: attr(data-tg-off);
+}
+.tgl-skewed + .tgl-btn:active {
+  background: #888;
+}
+.tgl-skewed + .tgl-btn:active:before {
+  left: -10%;
+}
+.tgl-skewed:checked + .tgl-btn {
+  background: #86d993;
+}
+.tgl-skewed:checked + .tgl-btn:before {
+  left: -100%;
+}
+.tgl-skewed:checked + .tgl-btn:after {
+  left: 0;
+}
+.tgl-skewed:checked + .tgl-btn:active:after {
+  left: 10%;
+}
+
+.tgl-flat + .tgl-btn {
+  padding: 2px;
+  transition: all 0.2s ease;
+  background: #fff;
+  border: 4px solid #f2f2f2;
+  border-radius: 2em;
+}
+.tgl-flat + .tgl-btn:after {
+  transition: all 0.2s ease;
+  background: #f2f2f2;
+  content: "";
+  border-radius: 1em;
+}
+.tgl-flat:checked + .tgl-btn {
+  border: 4px solid #7fc6a6;
+}
+.tgl-flat:checked + .tgl-btn:after {
+  left: 50%;
+  background: #7fc6a6;
+}
+
+.tgl-flip + .tgl-btn {
+  padding: 2px;
+  transition: all 0.2s ease;
+  font-family: sans-serif;
+  perspective: 100px;
+}
+.tgl-flip + .tgl-btn:after,
+.tgl-flip + .tgl-btn:before {
+  display: inline-block;
+  transition: all 0.4s ease;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  line-height: 2em;
+  font-weight: bold;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 4px;
+}
+.tgl-flip + .tgl-btn:after {
+  content: attr(data-tg-on);
+  background: #02c66f;
+  transform: rotateY(-180deg);
+}
+.tgl-flip + .tgl-btn:before {
+  background: #ff3a19;
+  content: attr(data-tg-off);
+}
+.tgl-flip + .tgl-btn:active:before {
+  transform: rotateY(-20deg);
+}
+.tgl-flip:checked + .tgl-btn:before {
+  transform: rotateY(180deg);
+}
+.tgl-flip:checked + .tgl-btn:after {
+  transform: rotateY(0);
+  left: 0;
+  background: #7fc6a6;
+}
+.tgl-flip:checked + .tgl-btn:active:after {
+  transform: rotateY(20deg);
+}
+
+#registerModal .modal-dialog,
+#loginModal .modal-dialog {
+  width: 360px;
+}
+#registerModal .modal-dialog a,
+#loginModal .modal-dialog a {
+  font-family: "Raleway";
+}
+#registerModal .modal-dialog p,
+#loginModal .modal-dialog p {
+  text-align: center;
+  margin-top: 12px;
+}
+#registerModal .modal-dialog h4,
+#loginModal .modal-dialog h4 {
+  font-size: 18px;
+}
+#registerModal .alert,
+#loginModal .alert {
+  font-size: 12px;
+  padding: 12px;
+}
+#registerModal button[type="submit"],
+#loginModal button[type="submit"] {
+  padding: 0;
+  display: block;
+  line-height: 35px;
+  height: 42px;
+  border: 2px solid #fba70c;
+  border-radius: 50px;
+  background: #fba70c;
+  color: #fff;
+  width: 100%;
+  font-family: "Raleway";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#registerModal .pt-social-login,
+#loginModal .pt-social-login {
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  margin-top: 12px;
+  text-align: center;
+}
+#registerModal .pt-social-login b,
+#loginModal .pt-social-login b {
+  display: block;
+  margin-bottom: 12px;
+  color: #333;
+}
+#registerModal .pt-social-login a,
+#loginModal .pt-social-login a {
+  display: inline-block;
+  line-height: 32px;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  border: 1px solid #333;
+  color: #333;
+  border-radius: 33px;
+  transition: all 0.3s;
+  margin: 0 2px;
+}
+#registerModal .pt-social-login a i,
+#loginModal .pt-social-login a i {
+  margin: 0;
+}
+#registerModal .pt-social-login a:hover,
+#loginModal .pt-social-login a:hover {
+  color: #fff;
+}
+#registerModal .pt-social-login a:hover.facebook,
+#loginModal .pt-social-login a:hover.facebook {
+  background: #3b5998;
+  border-color: #3b5998;
+}
+#registerModal .pt-social-login a:hover.twitter,
+#loginModal .pt-social-login a:hover.twitter {
+  background: #00acee;
+  border-color: #00acee;
+}
+#registerModal .pt-social-login a:hover.google,
+#loginModal .pt-social-login a:hover.google {
+  background: #c4302b;
+  border-color: #c4302b;
+}
+
+.pt-indexpage .pt-header {
+  overflow: initial;
+}
+
+.pt-header-top {
+  position: relative;
+  z-index: 5;
+  height: 68px;
+}
+.pt-header-top:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.pt-header-top .over {
+  position: absolute;
+  right: 0;
+  height: 68px;
+  overflow: hidden;
+  width: 100%;
+}
+.pt-header-top .pt-bg {
+  position: absolute;
+  right: 0;
+  width: 300px;
+  height: 68px;
+  background: #ff9f0e;
+}
+.pt-header-top .pt-bg:before {
+  position: absolute;
+  content: "";
+  background: #ff9f0e;
+  border-radius: 50%;
+  top: -130px;
+  left: -370px;
+  height: 450px;
+  width: 408px;
+}
+.pt-header-top .pt-logo {
+  float: left;
+  position: relative;
+}
+.pt-header-top .pt-logo a {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 22px;
+  height: 68px;
+  line-height: 68px;
+  display: block;
+  position: relative;
+  /* padding: 2px 0px; */
+  overflow: hidden;
+}
+.pt-header-top .pt-logo a img {
+  max-height: 90%;
+  padding-bottom: 3px;
+}
+.pt-header-top .pt-menu {
+  float: right;
+}
+.pt-header-top .pt-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 12px;
+}
+.pt-header-top .pt-menu ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.pt-header-top .pt-menu ul li {
+  float: left;
+  position: relative;
+}
+.pt-header-top .pt-menu ul li a {
+  display: block;
+  color: rgb(253, 253, 253);
+  font-family: "Raleway";
+  font-size: 16px;
+  padding: 12px 22px;
+  font-weight: 500;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 3;
+}
+.pt-header-top .pt-menu ul li a:before {
+  content: "";
+  width: 90%;
+  height: 30px;
+  position: absolute;
+  left: 5%;
+  top: 12px;
+  z-index: -1;
+  border-radius: 40px;
+  transition: all 0.3s;
+}
+.pt-header-top .pt-menu ul li a:hover {
+  color: #d1830e;
+}
+.pt-header-top .pt-menu ul li a:hover:before {
+  background: #ffffff;
+  box-shadow: 0 3px 0 #d0830f;
+  left: 5%;
+  top: 9px;
+}
+.pt-header-top .pt-menu ul li.pt-mobile-menu {
+  display: none;
+}
+.pt-header-top .pt-menu ul li.pt-mobile-menu a {
+  background: #000;
+  width: 36px;
+  height: 36px;
+  color: #fff;
+  text-align: center;
+  padding: 0;
+  line-height: 36px;
+  border-radius: 50%;
+  margin-top: 6px;
+}
+.pt-header-top .pt-menu ul li.pt-mobile-menu a:before {
+  content: none;
+}
+.pt-header-top .pt-menu ul li.pt-mobile-menu a.active {
+  border-radius: 5px 5px 0 0;
+}
+.pt-header-top .pt-menu ul li.pt-mobile-menu .pt-drop {
+  background: #000;
+}
+.pt-header-top .pt-menu ul li.pt-mobile-menu .pt-drop.open {
+  top: 38px;
+  right: -18px;
+}
+.pt-header-top .pt-menu ul li.pt-mobile-menu .pt-drop li a {
+  width: 100%;
+  height: auto;
+  line-height: 22px;
+  padding: 8px;
+  border-radius: 0;
+  border-color: #333;
+  margin: 0;
+  text-align: left;
+}
+.pt-header-top .pt-menu ul li.pt-cart a {
+  background: #65902e;
+  color: #fff;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  margin-top: 8px;
+  margin-right: 16px;
+  margin-left: 16px;
+  background: #ffb545;
+  color: #9e640c;
+  box-shadow: 0 0 0 2px #ff9f0e, 0 0 0 4px #ffb545;
+  position: relative;
+}
+.pt-header-top .pt-menu ul li.pt-cart a:before {
+  content: none;
+}
+.pt-header-top .pt-menu ul li.pt-cart a i {
+  font-weight: 700;
+}
+.pt-header-top .pt-menu ul li.pt-cart a b {
+  position: absolute;
+  top: 0;
+  right: -6px;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  background: #2ecc71;
+  color: #ffffff;
+  line-height: 16px;
+  border-radius: 50%;
+  font-family: "Raleway";
+  font-weight: 400;
+  box-shadow: 0 0 0 2px #ff9f0e;
+}
+.pt-header-top .pt-menu ul li.pt-login a {
+  background: black;
+  padding: 6px 22px;
+  border-radius: 30px;
+  font-weight: 700;
+  margin-top: 6px;
+  font-size: 14px;
+}
+.pt-header-top .pt-menu ul li.pt-login a i {
+  font-weight: 700;
+  font-size: 13px;
+  margin-right: 6px;
+}
+.pt-header-top .pt-menu ul li.pt-login a:before {
+  content: none;
+}
+.pt-header-top .pt-menu ul li .pt-thumb {
+  overflow: hidden;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff;
+}
+.pt-header-top .pt-menu ul li .pt-thumb img {
+  width: 100%;
+}
+.pt-header-top .pt-menu ul li.pt-img {
+  padding-top: 8px;
+}
+.pt-header-top .pt-menu ul li.pt-author {
+  font-size: 12px;
+  font-family: "Raleway";
+  cursor: pointer;
+  font-weight: 700;
+  padding: 12px 0 4px 0;
+  margin-left: 8px;
+}
+.pt-header-top .pt-menu ul li.pt-author b {
+  position: absolute;
+  top: 10px;
+  left: -16px;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  background: #e74a4a;
+  color: #ffffff;
+  line-height: 16px;
+  border-radius: 50%;
+  text-align: center;
+  font-family: "Raleway";
+  font-weight: 400;
+  box-shadow: 0 0 0 2px #ff9f0e;
+}
+.pt-header-top .pt-menu ul li .pt-drop {
+  position: absolute;
+  background: #3a3434;
+  margin: 0;
+  padding: 8px;
+  right: 0;
+  width: 222px;
+  border-radius: 10px;
+  top: 60px;
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 3;
+}
+.pt-header-top .pt-menu ul li .pt-drop.open {
+  visibility: visible;
+  opacity: 1;
+  top: 50px;
+}
+.pt-header-top .pt-menu ul li .pt-drop li {
+  float: none;
+}
+.pt-header-top .pt-menu ul li .pt-drop li a {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s;
+}
+.pt-header-top .pt-menu ul li .pt-drop li a i {
+  margin-right: 6px;
+}
+.pt-header-top .pt-menu ul li .pt-drop li a:before {
+  content: none;
+}
+.pt-header-top .pt-menu ul li .pt-drop li a:hover {
+  background: #ffebcc;
+  color: #ba750e;
+  border-color: #ffe6c1;
+  border-radius: 5px;
+}
+.pt-header-top .pt-menu ul li .pt-drop li:last-of-type a {
+  border-bottom: 0;
+}
+.pt-header-content {
+  position: relative;
+}
+.pt-header-content .pt-body {
+  position: relative;
+  z-index: 2;
+  width: 50%;
+  padding-top: 68px;
+}
+.pt-header-content .pt-body p {
+  margin: 12px 0 48px;
+}
+.pt-header-content .pt-body a {
+  background: #ff9f0e;
+  display: inline-block;
+  font-family: "Raleway";
+  font-size: 18px;
+  border-radius: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  color: #fff;
+}
+.pt-header-content .pt-body a i {
+  margin-left: 12px;
+}
+.pt-header-content .pt-body .pt-info {
+  margin-top: 98px;
+}
+.pt-header-content .pt-body .pt-info:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.pt-header-content .pt-body .pt-info div {
+  float: left;
+  text-align: center;
+  width: 265px;
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.05);
+}
+.pt-header-content .pt-body .pt-info div:first-of-type {
+  margin-right: 24px;
+}
+.pt-header-content .pt-body .pt-info span {
+  background: #ff9f0e;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  margin: 22px 0;
+  color: #fff;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ff9f0e;
+}
+.pt-header-content .pt-body .pt-info span i {
+  font-weight: 700;
+  font-size: 28px;
+}
+.pt-header-content .pt-body .pt-info h3 {
+  font-size: 16px;
+}
+.pt-header-content .pt-body .pt-info p {
+  font-weight: 500;
+  color: #aaa;
+  margin: 0;
+  margin-bottom: 22px;
+  font-family: "Raleway";
+}
+.pt-header-content .pt-thumb .pt-bg {
+  position: absolute;
+  height: 600px;
+  display: block;
+  background: #ff9f0e;
+  width: 300px;
+  right: 0;
+  top: -68px;
+}
+.pt-header-content .pt-thumb .pt-bg:before,
+.pt-header-content .pt-thumb .pt-bg:after {
+  position: absolute;
+  content: "";
+  background: #ff9f0e;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
+.pt-header-content .pt-thumb .pt-bg:before {
+  top: -130px;
+  left: -370px;
+  height: 450px;
+  width: 408px;
+}
+.pt-header-content .pt-thumb .pt-bg:after {
+  bottom: -44px;
+  right: -100px;
+  width: 507px;
+  height: 430px;
+}
+.pt-header-content .pt-thumb img {
+  width: 600px;
+  position: absolute;
+  right: 70px;
+  top: 100px;
+}
+
+.pt-section {
+  min-height: 200px;
+  margin: 122px 0;
+}
+.pt-section-title {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.pt-section-title h3 {
+  font-size: 26px;
+  line-height: 34px;
+  position: relative;
+  font-family: "Raleway";
+}
+.pt-section-title h3:before,
+.pt-section-title h3:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-radius: 120px;
+  background: #ff9f0e;
+  bottom: -24px;
+}
+.pt-section-title h3:before {
+  width: 62px;
+  left: 42%;
+}
+.pt-section-title h3:after {
+  width: 32px;
+  left: 51.5%;
+}
+.pt-section-title p {
+  color: #aaa;
+  line-height: 24px;
+  position: relative;
+  margin-top: 43px;
+  font-family: "Raleway";
+}
+.pt-section-title p:before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-radius: 120px;
+  background: #ff9f0e;
+  top: -24px;
+  width: 12px;
+  left: 57%;
+}
+.pt-section.pt-best .pt-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.095);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  padding: 24px;
+  text-align: center;
+  margin-top: 48px;
+}
+.pt-section.pt-best .pt-item .pt-thumb {
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.23);
+  margin: 0 auto 24px auto;
+  position: relative;
+}
+.pt-section.pt-best .pt-item .pt-thumb:before {
+  content: "";
+  position: absolute;
+  width: 106px;
+  height: 106px;
+  left: -4px;
+  top: -4px;
+  border-radius: 50%;
+  border: 2px solid #ff9f0e;
+}
+.pt-section.pt-best .pt-item .pt-thumb img {
+  width: 100%;
+  border-radius: 50%;
+}
+.pt-section.pt-best .pt-item .pt-title {
+  text-align: center;
+}
+.pt-section.pt-best .pt-item .pt-title h3 {
+  margin: 16px 0 0 0;
+  letter-spacing: 2px;
+  color: #333;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+.pt-section.pt-best .pt-item .pt-title a {
+  color: #333;
+}
+.pt-section.pt-best .pt-item .pt-stars {
+  color: #ff9f0e;
+  margin: 4px 0 10px 0;
+}
+.pt-section.pt-best .pt-item .pt-stars b {
+  font-family: Raleway;
+  margin-left: 5px;
+  color: #2c2c2c;
+  font-weight: 200;
+}
+.pt-section.pt-best .pt-item .pt-address {
+  font-size: 10px;
+  color: #999;
+}
+.pt-section.pt-best .pt-item .pt-address i {
+  margin-right: 6px;
+}
+.pt-section.pt-best .pt-post {
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  position: relative;
+  margin-top: 48px;
+}
+.pt-section.pt-best .pt-post .pt-option {
+  position: absolute;
+  top: -20px;
+  right: 16px;
+}
+.pt-section.pt-best .pt-post .pt-option a {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50px;
+  background: #ff9f0e;
+  color: #fff;
+}
+.pt-section.pt-best .pt-post .pt-option a:last-of-type {
+  background: #4cd137;
+  height: 38px;
+  width: 38px;
+  line-height: 38px;
+  font-size: 18px;
+}
+.pt-section.pt-best .pt-post .pt-option a i {
+  font-weight: 700;
+}
+.pt-section.pt-best .pt-post .pt-thumb {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 310px;
+}
+.pt-section.pt-best .pt-post .pt-thumb img {
+  width: 100%;
+}
+.pt-section.pt-best .pt-post .pt-details {
+  border-radius: 8px;
+  background: #fff;
+  margin-top: -32px;
+  position: relative;
+  padding: 12px;
+}
+.pt-section.pt-best .pt-post .pt-details .pt-price {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  font-family: "Raleway";
+  font-weight: 700;
+  text-align: center;
+  border-radius: 13px;
+  background: #ff9f0e;
+  color: #fff;
+  position: absolute;
+  top: -14px;
+  left: 16px;
+  padding: 0 12px;
+}
+.pt-section.pt-best .pt-post .pt-details .pt-title h1 {
+  line-height: 24px;
+  margin: 0;
+}
+.pt-section.pt-best .pt-post .pt-details .pt-title h1 a {
+  font-size: 16px;
+  color: #000;
+  font-family: "Raleway";
+}
+.pt-section.pt-best .pt-post .pt-details .pt-info {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
+.pt-section.pt-best .pt-post .pt-details .pt-info:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.pt-section.pt-best .pt-post .pt-details .pt-info span:first-of-type {
+  font-family: "Raleway";
+}
+.pt-section.pt-best .pt-post .pt-details .pt-info span:first-of-type i {
+  margin-right: 3px;
+  font-weight: 700;
+}
+.pt-section.pt-best .pt-post .pt-details .pt-info .pt-stars {
+  color: #ff9f0e;
+  float: right;
+}
+.pt-section.pt-best .pt-post .pt-details .pt-info .pt-stars b {
+  font-family: "Raleway";
+  margin-left: 5px;
+  color: #2c2c2c;
+  font-weight: 400;
+  font-size: 14px;
+}
+.pt-section.pt-best .pt-post .pt-details .pt-tags {
+  padding: 12px 0;
+}
+.pt-section.pt-best .pt-post .pt-details .pt-tags a {
+  display: inline-block;
+  background: #fff9f1;
+  font-size: 10px;
+  border-radius: 3px;
+  margin-right: 3px;
+  color: #f2ba65;
+  font-family: Raleway;
+  font-weight: 600;
+  padding: 0px 3px;
+  line-height: 22px;
+}
+.pt-section.pt-best .pt-link {
+  text-align: center;
+  margin-top: 68px;
+}
+.pt-section.pt-best .pt-link a {
+  background: #ff9f0e;
+  display: inline-block;
+  font-family: "Raleway";
+  border-radius: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 12px 64px;
+  color: #fff;
+}
+.pt-section.pt-best .pt-link a i {
+  margin-left: 12px;
+}
+.pt-section .pt-how {
+  text-align: center;
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.05);
+  padding: 38px;
+  width: 90%;
+  display: table;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.pt-section .pt-how span {
+  background: #ff9f0e;
+  display: inline-block;
+  width: 78px;
+  height: 78px;
+  text-align: center;
+  border-radius: 50%;
+  margin: 22px 0 30px 0;
+  color: #fff;
+  box-shadow: 0 0 0 3px #fff, 0 0 0 5px #ff9f0e;
+}
+.pt-section .pt-how span i {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 78px;
+}
+.pt-section .pt-how h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+.pt-section .pt-how p {
+  font-weight: 500;
+  color: #aaa;
+  margin: 0;
+  font-family: "Raleway";
+}
+.pt-section .pt-testimonials {
+  margin-top: 8px;
+}
+.pt-section .pt-testimonials .owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+.pt-section .pt-testimonials .owl-nav .owl-prev,
+.pt-section .pt-testimonials .owl-nav .owl-next {
+  position: absolute;
+  display: inline-block;
+  background: #eee;
+  width: 38px;
+  height: 38px;
+  font-size: 22px;
+  border-radius: 50%;
+}
+.pt-section .pt-testimonials .owl-nav .owl-prev span,
+.pt-section .pt-testimonials .owl-nav .owl-next span {
+  height: 32px;
+  line-height: 28px;
+  display: inline-block;
+}
+.pt-section .pt-testimonials .owl-nav .owl-prev {
+  left: 20%;
+}
+.pt-section .pt-testimonials .owl-nav .owl-next {
+  right: 20%;
+}
+.pt-section .pt-testimonials .pt-item {
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  border-radius: 20px;
+  padding: 48px;
+  width: 55%;
+  text-align: center;
+  margin: 44px auto;
+  position: relative;
+}
+.pt-section .pt-testimonials .pt-item:after {
+  position: absolute;
+  content: "";
+  width: 90%;
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  border-radius: 20px;
+  padding: 48px;
+  right: 5%;
+  z-index: -1;
+  bottom: -20px;
+}
+.pt-section .pt-testimonials .pt-item .pt-thumb {
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  box-shadow: 0 0 0 5px #fff, 0 0 0 8px #ff9f0e;
+}
+.pt-section .pt-testimonials .pt-item .pt-thumb img {
+  width: 100%;
+  height: 100%;
+}
+.pt-section .pt-testimonials .pt-item .pt-content {
+  margin: 24px 0;
+  font-family: "Raleway";
+  font-weight: 600;
+}
+.pt-section .pt-testimonials .pt-item .pt-stars {
+  color: #ff9f0e;
+}
+.pt-section .pt-testimonials .pt-item .pt-author {
+  font-family: "Raleway";
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 24px;
+}
+.pt-section .pt-subscribe {
+  margin-top: 68px;
+}
+.pt-section .pt-subscribe .pt-input {
+  position: relative;
+  width: 60%;
+  display: table;
+  margin: 0 auto;
+}
+.pt-section .pt-subscribe .pt-input input {
+  display: block;
+  width: 100%;
+  height: 68px;
+  background: #fff;
+  font-family: "Raleway";
+  font-size: 18px;
+  border: 0;
+  border-radius: 50px;
+  padding: 24px;
+  box-shadow: 0px 1px 17px 3px rgba(0, 0, 0, 0.05);
+}
+.pt-section .pt-subscribe .pt-input button {
+  background: #ff9f0e;
+  display: inline-block;
+  font-family: "Raleway";
+  font-size: 18px;
+  border-radius: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px 64px;
+  color: #fff;
+  border: 0;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+.pt-section .pt-subscribe .pt-input button i {
+  margin-left: 12px;
+}
+
+.pt-footer {
+  padding: 12px 0 68px 0;
+}
+.pt-footer .pt-logo a {
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 24px;
+  display: block;
+}
+.pt-footer .pt-lang {
+  margin-bottom: 12px;
+}
+.pt-footer .pt-lang a {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 3px #f5f5f5;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.pt-footer .pt-lang a i {
+  line-height: 25px;
+}
+.pt-footer .pt-lang a,
+.pt-footer .pt-lang a i {
+  width: 18px;
+  height: 18px;
+}
+.pt-footer .pt-social a {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background: #444;
+  color: #fff;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+.pt-footer .pt-links {
+  float: left;
+  width: 50%;
+}
+.pt-footer .pt-links h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.pt-footer .pt-links a {
+  display: block;
+  color: #444;
+}
+.pt-footer .pt-copy {
+  font-size: 12px;
+  color: #666;
+}
+.pt-footer .pt-copy h3 {
+  font-size: 18px;
+}
+.pt-footer .pt-copy a {
+  color: #333;
+}
+
+.pt-restaurantspage .pt-reviews {
+  font-size: 12px;
+}
+.pt-restaurantspage .pt-reviews .float-left {
+  font-size: 14px;
+}
+.pt-restaurantspage .pt-reviews .float-right {
+  color: #777;
+}
+.pt-restaurantspage .pt-reviews i {
+  color: #ff9f0e;
+}
+.pt-restaurantspage .pt-reviews p {
+  overflow: initial;
+  height: initial;
+  margin: 16px !important;
+  font-size: 14px !important;
+}
+.pt-restaurantspage .pt-restaurant-head {
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.23);
+  margin: 48px 0;
+  position: relative;
+  background: #51390e;
+  overflow: hidden;
+}
+.pt-restaurantspage .pt-restaurant-head:before {
+  content: "";
+  width: 101%;
+  height: 100%;
+  background-image: url(../img/foods/cover.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1.4px);
+  opacity: 0.8;
+  position: absolute;
+  left: -1%;
+  top: 0;
+}
+.pt-restaurantspage .pt-restaurant-head .pt-dtable {
+  height: 300px;
+  margin: 0 auto;
+}
+.pt-restaurantspage .pt-restaurant-head .pt-profile {
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+.pt-restaurantspage .pt-restaurant-head .pt-profile .pt-thumb {
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.23);
+  margin: 0 auto 24px auto;
+  position: relative;
+}
+.pt-restaurantspage .pt-restaurant-head .pt-profile .pt-thumb span {
+  font-family: "Raleway";
+  position: absolute;
+  right: -5px;
+  bottom: 2px;
+  display: block;
+  background: #2ecc71;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 0 12px;
+  line-height: 16px;
+  box-shadow: 0 0 0 1px #34a363;
+}
+.pt-restaurantspage .pt-restaurant-head .pt-profile .pt-thumb span.bg-danger {
+  box-shadow: 0 0 0 1px #a33434;
+}
+.pt-restaurantspage .pt-restaurant-head .pt-profile .pt-thumb:before {
+  content: "";
+  position: absolute;
+  width: 106px;
+  height: 106px;
+  left: -4px;
+  top: -4px;
+  border-radius: 50%;
+  border: 2px solid #ff9f0e;
+}
+.pt-restaurantspage .pt-restaurant-head .pt-profile .pt-thumb img {
+  width: 100%;
+  min-height: 100%;
+  border-radius: 50%;
+}
+.pt-restaurantspage .pt-restaurant-head .pt-profile .pt-name h1 {
+  font-size: 22px;
+}
+.pt-restaurantspage .pt-restaurant-head .pt-profile .pt-stars {
+  color: #ff9f0e;
+  text-shadow: 0 0 3px rgba(27, 27, 27, 0.6);
+}
+.pt-restaurantspage .pt-restaurant-head .pt-profile .pt-stars b {
+  font-family: Raleway;
+  margin-left: 5px;
+  font-weight: 400;
+}
+.pt-restaurantspage .pt-restaurant-head .pt-profile .pt-address {
+  font-size: 13px;
+  margin-top: 12px;
+}
+.pt-restaurantspage .pt-restaurant-head .pt-profile .pt-address i {
+  margin-right: 6px;
+}
+.pt-restaurantspage .nav-tabs {
+  border-bottom: 1px solid #fff1e6;
+  padding: 0 12px;
+}
+.pt-restaurantspage .nav-tabs .nav-link {
+  display: block;
+  padding: 4px 12px;
+  border-radius: 3px 3px 0 0 !important;
+  background: #fff1e6;
+  border: 1px solid #fff1e6;
+  margin-right: 3px;
+  font-family: "Raleway";
+  font-weight: 600;
+}
+.pt-restaurantspage .nav-tabs .nav-link.active {
+  background: #fc8621;
+  color: #fff;
+  border: 1px solid #fc8621;
+}
+.pt-restaurantspage .nav-tabs .nav-link:hover {
+  border: 1px solid #fc8621;
+}
+.pt-restaurantspage .tab-pane {
+  padding: 24px 12px 0 12px;
+}
+.pt-restaurantspage .pt-album-img {
+  border-radius: 10px;
+  box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.17);
+  background: #fff;
+  overflow: hidden;
+  height: 100px;
+  margin: 12px 0;
+}
+.pt-restaurantspage .pt-album-img img {
+  width: 100%;
+  min-height: 100%;
+}
+.pt-restaurantspage .pt-restaurant-body {
+  border-radius: 10px;
+  box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.07);
+  background: #fff;
+  padding: 24px;
+  padding-top: 36px;
+  margin-bottom: 48px;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant {
+  background: #fff;
+  padding: 12px;
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  margin-top: 12px;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant thead {
+  background: #f7f7f7;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant .pt-dtable {
+  height: 48px;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant .pt-thumb {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-right: 12px;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant .pt-thumb img {
+  width: 100%;
+  min-height: 100%;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant h3 {
+  font-size: 14px;
+  margin: 5px 0 3px 0;
+  padding: 0 12px;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant h3 a {
+  color: #333;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant p {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+  line-height: 22px;
+  margin: 0;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant p span {
+  display: block;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant p i {
+  margin-right: 3px;
+  margin-left: 22px;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant p i:first-of-type {
+  margin-left: 0;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant .pt-title i {
+  float: right;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant .pt-resaurant {
+  margin: 0;
+  background: #fffcfa;
+  border-bottom: 1px solid #f9e4d2;
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0px;
+  padding: 0;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant .pt-resaurant p {
+  width: 60%;
+  overflow: hidden;
+  height: 22px;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant .pt-resaurant h3 {
+  padding: 0;
+}
+.pt-restaurantspage
+  .pt-restaurant-body
+  .pt-resaurant
+  .pt-resaurant
+  .pt-options {
+  position: absolute;
+  right: 12px;
+  top: 18px;
+}
+.pt-restaurantspage
+  .pt-restaurant-body
+  .pt-resaurant
+  .pt-resaurant
+  .pt-options
+  a {
+  font-weight: 700;
+  display: inline-block;
+  color: #fff;
+  float: left;
+  font-family: "Raleway";
+}
+.pt-restaurantspage
+  .pt-restaurant-body
+  .pt-resaurant
+  .pt-resaurant
+  .pt-options
+  .pt-out {
+  font-size: 8px;
+  background: #ff9f0e;
+  line-height: 22px;
+  padding: 0 8px;
+  border-radius: 20px;
+  margin: 5px 6px;
+}
+.pt-restaurantspage
+  .pt-restaurant-body
+  .pt-resaurant
+  .pt-resaurant
+  .pt-options
+  .pt-reduce {
+  color: #e85a5a;
+  padding: 2px 4px;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.pt-restaurantspage
+  .pt-restaurant-body
+  .pt-resaurant
+  .pt-resaurant
+  .pt-options
+  .pt-reduce.text-success {
+  text-decoration: none !important;
+}
+.pt-restaurantspage
+  .pt-restaurant-body
+  .pt-resaurant
+  .pt-resaurant
+  .pt-options
+  .pt-addtobasket {
+  background: #2ecc71;
+  border-radius: 20px;
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  text-align: center;
+  position: relative;
+}
+.pt-restaurantspage
+  .pt-restaurant-body
+  .pt-resaurant
+  .pt-resaurant
+  .pt-options
+  .pt-price {
+  background: #2ecc71;
+  border-radius: 0 20px 20px 0;
+  height: 22px;
+  font-size: 12px;
+  line-height: 21px;
+  text-align: center;
+  padding: 0 8px;
+  margin: 5px 0 0 -5px;
+  padding-left: 12px;
+}
+.pt-restaurantspage
+  .pt-restaurant-body
+  .pt-resaurant
+  .pt-resaurant
+  .pt-options
+  .pt-addtocart {
+  display: inline-block;
+}
+.pt-restaurantspage
+  .pt-restaurant-body
+  .pt-resaurant
+  .pt-resaurant
+  .pt-options
+  .pt-addtocart
+  a {
+  transition: all 0.3s;
+  box-shadow: 0 0 0 2px #fff;
+}
+.pt-restaurantspage
+  .pt-restaurant-body
+  .pt-resaurant
+  .pt-resaurant
+  .pt-options
+  .pt-addtocart:hover
+  a {
+  background: #fff;
+  color: #2ecc71;
+  box-shadow: 0 0 0 2px #2ecc71;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant.open .pt-resaurant {
+  visibility: visible;
+  opacity: 1;
+  max-height: 100%;
+  padding: 12px;
+}
+.pt-restaurantspage .pt-restaurant-body .pt-resaurant.open .pt-title {
+  margin: 0 0 12px 0;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+.pt-restaurantspage .pt-restaurant-sidebar {
+  min-height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.07);
+  margin: 0 0 48px 0;
+  position: relative;
+  background: #fff;
+  padding: 24px;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-search {
+  padding-top: 12px;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-search .pt-input {
+  position: relative;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-search .pt-input input {
+  background: #fff;
+  border: 0;
+  box-shadow: 0 0 10px #eee;
+  padding: 8px 16px;
+  border-radius: 50px;
+  width: 100%;
+  font-family: "Raleway";
+  border-bottom: 1px solid #ff9f0e;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-search .pt-input i {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-social {
+  text-align: center;
+  padding: 24px 0;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-social a {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  background: #ff9f0e;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 3px;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-social a.yt {
+  background: #ed2a32;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-social a.fb {
+  background: #3b5998;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-social a.tw {
+  background: #00aced;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-social a.in {
+  background: #ff0084;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-opening h3 {
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-opening h3 i {
+  margin-right: 6px;
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-opening .table {
+  background: #fefcfc;
+  border-radius: 5px;
+  box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.07);
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-opening .table td {
+  border-top: 1px solid #eee;
+  padding: 8px 16px;
+  font-family: "Raleway";
+}
+.pt-restaurantspage .pt-restaurant-sidebar .pt-opening .table td:first-of-type {
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.pt-restaurantspage
+  .pt-restaurant-sidebar
+  .pt-opening
+  .table
+  tr:first-of-type
+  td {
+  border: 0;
+}
+.pt-restaurantspage .pt-restaurants .pt-restaurant-sidebar {
+  margin-right: 32px;
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.095);
+}
+.pt-restaurantspage .pt-restaurants .pt-restaurant-sidebar h6 {
+  color: #000;
+  margin-top: 24px;
+}
+.pt-restaurantspage .pt-restaurants .pt-restaurant-sidebar .pt-stars {
+  color: #ff9f0e;
+}
+.pt-restaurantspage .pt-restaurants .pt-restaurant-sidebar .pt-submit button {
+  background: #ff9f0e;
+  color: #fff;
+  border: 0;
+  border-radius: 50px;
+  margin: 32px 0 12px 0;
+  display: block;
+  width: 100%;
+  height: 48px;
+  box-shadow: -1px 5px 11px rgba(255, 159, 14, 0.45);
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 16px;
+}
+.pt-restaurantspage .pt-restaurants .pt-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.095);
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  padding: 24px;
+  text-align: center;
+}
+.pt-restaurantspage .pt-restaurants .pt-item .pt-thumb {
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.23);
+  margin: 0 auto 24px auto;
+  position: relative;
+}
+.pt-restaurantspage .pt-restaurants .pt-item .pt-thumb:before {
+  content: "";
+  position: absolute;
+  width: 106px;
+  height: 106px;
+  left: -4px;
+  top: -4px;
+  border-radius: 50%;
+  border: 2px solid #ff9f0e;
+}
+.pt-restaurantspage .pt-restaurants .pt-item .pt-thumb img {
+  width: 100%;
+  border-radius: 50%;
+}
+.pt-restaurantspage .pt-restaurants .pt-item .pt-title {
+  text-align: center;
+}
+.pt-restaurantspage .pt-restaurants .pt-item .pt-title h3 {
+  margin: 16px 0 0 0;
+  letter-spacing: 2px;
+  color: #333;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+.pt-restaurantspage .pt-restaurants .pt-item .pt-title a {
+  color: #333;
+}
+.pt-restaurantspage .pt-restaurants .pt-item .pt-stars {
+  color: #ff9f0e;
+  margin: 4px 0 10px 0;
+}
+.pt-restaurantspage .pt-restaurants .pt-item .pt-stars b {
+  font-family: Raleway;
+  margin-left: 5px;
+  color: #2c2c2c;
+  font-weight: 200;
+}
+.pt-restaurantspage .pt-restaurants .pt-item .pt-address {
+  font-size: 10px;
+  color: #999;
+}
+.pt-restaurantspage .pt-restaurants .pt-item .pt-address i {
+  margin-right: 6px;
+}
+.pt-restaurantspage .pt-footer {
+  margin-top: 68px;
+}
+
+#senditemtocart .pt-reviews {
+  font-size: 12px;
+}
+#senditemtocart .pt-reviews .float-left {
+  font-size: 14px;
+}
+#senditemtocart .pt-reviews .float-right {
+  color: #777;
+}
+#senditemtocart .pt-reviews i {
+  color: #ff9f0e;
+}
+#senditemtocart .pt-reviews p {
+  overflow: initial;
+  height: initial;
+  margin: 16px !important;
+  font-size: 14px !important;
+}
+#senditemtocart .nav-tabs {
+  border-bottom: 1px solid #fff1e6;
+  padding: 0 12px;
+}
+#senditemtocart .nav-tabs .nav-link {
+  display: block;
+  padding: 4px 12px;
+  border-radius: 3px 3px 0 0 !important;
+  background: #fff1e6;
+  border: 1px solid #fff1e6;
+  margin-right: 3px;
+  font-family: "Raleway";
+  font-weight: 600;
+}
+#senditemtocart .nav-tabs .nav-link.active {
+  background: #fc8621;
+  color: #fff;
+  border: 1px solid #fc8621;
+}
+#senditemtocart .nav-tabs .nav-link:hover {
+  border: 1px solid #fc8621;
+}
+#senditemtocart .tab-pane {
+  padding: 24px 12px 0 12px;
+}
+#senditemtocart .modal-body {
+  overflow: hidden;
+  padding-bottom: 98px;
+  padding-top: 34px;
+}
+#senditemtocart .close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  z-index: 2;
+}
+#senditemtocart .nav-tabs {
+  margin-top: 18px;
+}
+#senditemtocart .tab-pane {
+  padding: 8px 12px 0;
+}
+#senditemtocart .table {
+  margin: 0;
+}
+#senditemtocart .table tr:first-of-type td {
+  border-top: 0;
+}
+#senditemtocart .table .pt-addexratoitem,
+#senditemtocart .table .pt-removeexratoitem {
+  display: inline-block;
+  margin-left: 12px;
+}
+#senditemtocart .table td:last-of-type {
+  text-align: right;
+  font-weight: 700;
+}
+#senditemtocart .table td {
+  border-color: #fff1e6;
+}
+#senditemtocart textarea {
+  min-height: 36px;
+  height: 58px;
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 8px;
+}
+#senditemtocart .pt-thumb {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin-right: 20px;
+  overflow: hidden;
+}
+#senditemtocart .pt-thumb img {
+  width: 100%;
+  min-height: 100%;
+}
+#senditemtocart .pt-quantity {
+  position: relative;
+  margin-bottom: 12px;
+}
+#senditemtocart .pt-quantity i {
+  display: inline-block;
+  position: relative;
+  font-size: 10px;
+}
+#senditemtocart .pt-quantity i.pt-plus {
+  margin-left: -26px;
+  margin-right: 6px;
+  border-left: 1px solid #eee;
+  padding-left: 6px;
+}
+#senditemtocart .pt-quantity i.pt-minus {
+  margin-right: -26px;
+  margin-left: 6px;
+  border-right: 1px solid #eee;
+  padding-right: 6px;
+}
+#senditemtocart .pt-quantity input {
+  width: 72px;
+  height: 22px;
+  text-align: center;
+}
+#senditemtocart .pt-sizes {
+  margin-bottom: 12px;
+  padding-top: 8px;
+}
+#senditemtocart .pt-sizes a {
+  margin: 0 3px 6px 0;
+  display: inline-block;
+  background: #ff9f0e;
+  color: #fff;
+  font-family: Raleway;
+  font-weight: 500;
+  padding: 0 10px;
+  border-radius: 30px;
+  font-size: 12px;
+}
+#senditemtocart .pt-sizes a:first-of-type {
+  background: #fff;
+  color: #ff9f0e;
+  box-shadow: 0 0 0 2px #ff9f0e;
+}
+#senditemtocart .pt-ingredient {
+  font-size: 12px;
+  color: #999;
+  line-height: 22px;
+  display: block;
+}
+#senditemtocart .pt-desc {
+  color: #555;
+  padding: 12px;
+  padding-bottom: 0;
+  font-family: "Raleway";
+}
+#senditemtocart .pt-price-det {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #ff9f0e;
+  left: 0;
+  box-shadow: -1px -4px 10px rgba(255, 159, 14, 0.2);
+  border-radius: 0 0 4px 4px;
+  height: 68px;
+}
+#senditemtocart .pt-price-det .pt-price,
+#senditemtocart .pt-price-det .pt-reduce {
+  float: left;
+  font-family: "Raleway";
+  width: 98px;
+  height: 38px;
+  line-height: 38px;
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 4px;
+  text-align: center;
+}
+#senditemtocart .pt-price-det .pt-price {
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.28);
+  color: #333;
+  margin: 15px 12px 0 15px;
+}
+#senditemtocart .pt-price-det .pt-reduce {
+  margin: 15px 12px 0 0;
+  text-decoration: line-through;
+  width: auto;
+  color: #be0707;
+  font-weight: 400;
+}
+#senditemtocart .pt-price-det .pt-reduce.text-success {
+  text-decoration: none;
+}
+#senditemtocart .pt-price-det button {
+  float: right;
+  font-family: "Raleway";
+  width: 102px;
+  height: 38px;
+  line-height: 38px;
+  background: #2ecc71;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 48px;
+  text-align: center;
+  margin: 16px 16px 0 0;
+  box-shadow: 0 0 11px rgba(0, 0, 0, 0.2);
+  border: 0;
+  color: #fff;
+  transition: all 0.3s;
+}
+#senditemtocart .pt-price-det button:hover {
+  box-shadow: 0 0 0 0px #fff, 0 0 0 2px #09a94d;
+  background: #ff9f0e;
+  color: #09a94d;
+}
+#senditemtocart .pt-price-det button.pt-buy {
+  margin-right: 12px;
+  box-shadow: 0 0 0 3px #fd9e0e, 0 0 0 5px #0983e3;
+  background: #0984e3;
+}
+#senditemtocart .pt-price-det button.pt-buy:hover {
+  box-shadow: 0 0 0 0px #fff, 0 0 0 2px #0983e3;
+  background: #ff9f0e;
+  color: #0983e3;
+}
+
+.pt-cuisinespage .pt-post {
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  position: relative;
+  margin-bottom: 48px;
+}
+.pt-cuisinespage .pt-post .pt-option {
+  position: absolute;
+  top: -20px;
+  right: 16px;
+}
+.pt-cuisinespage .pt-post .pt-option a {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 50px;
+  background: #ff9f0e;
+  color: #fff;
+}
+.pt-cuisinespage .pt-post .pt-option a:last-of-type {
+  background: #4cd137;
+  height: 38px;
+  width: 38px;
+  line-height: 38px;
+  font-size: 18px;
+}
+.pt-cuisinespage .pt-post .pt-option a i {
+  font-weight: 700;
+}
+.pt-cuisinespage .pt-post .pt-thumb {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 310px;
+}
+.pt-cuisinespage .pt-post .pt-thumb img {
+  width: 100%;
+}
+.pt-cuisinespage .pt-post .pt-details {
+  border-radius: 8px;
+  background: #fff;
+  margin-top: -32px;
+  position: relative;
+  padding: 12px;
+}
+.pt-cuisinespage .pt-post .pt-details .pt-price {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  font-family: "Raleway";
+  font-weight: 700;
+  text-align: center;
+  border-radius: 13px;
+  background: #ff9f0e;
+  color: #fff;
+  position: absolute;
+  top: -14px;
+  left: 16px;
+  padding: 0 12px;
+}
+.pt-cuisinespage .pt-post .pt-details .pt-title h1 {
+  line-height: 24px;
+  margin: 0;
+}
+.pt-cuisinespage .pt-post .pt-details .pt-title h1 a {
+  font-size: 16px;
+  color: #000;
+  font-family: "Raleway";
+}
+.pt-cuisinespage .pt-post .pt-details .pt-info {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
+.pt-cuisinespage .pt-post .pt-details .pt-info:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.pt-cuisinespage .pt-post .pt-details .pt-info span:first-of-type {
+  font-family: "Raleway";
+}
+.pt-cuisinespage .pt-post .pt-details .pt-info span:first-of-type i {
+  margin-right: 3px;
+  font-weight: 700;
+}
+.pt-cuisinespage .pt-post .pt-details .pt-info .pt-stars {
+  color: #ff9f0e;
+  float: right;
+}
+.pt-cuisinespage .pt-post .pt-details .pt-info .pt-stars b {
+  font-family: "Raleway";
+  margin-left: 5px;
+  color: #2c2c2c;
+  font-weight: 400;
+  font-size: 14px;
+}
+.pt-cuisinespage .pt-post .pt-details .pt-tags {
+  padding: 12px 0;
+}
+.pt-cuisinespage .pt-post .pt-details .pt-tags a {
+  display: inline-block;
+  background: #fff9f1;
+  font-size: 10px;
+  border-radius: 3px;
+  margin-right: 3px;
+  color: #f2ba65;
+  font-family: Raleway;
+  font-weight: 600;
+  padding: 0px 3px;
+  line-height: 22px;
+}
+.pt-cuisinespage .pt-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.pt-cuisinespage .pt-item .pt-thumb {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.pt-cuisinespage .pt-item .pt-thumb img {
+  width: 100%;
+  filter: blur(1px);
+  transition: all 0.3s;
+}
+.pt-cuisinespage .pt-item .pt-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  background: linear-gradient(180deg, rgba(73, 65, 162, 0) 0%, black 100%);
+  color: #fff;
+  text-align: center;
+}
+.pt-cuisinespage .pt-item .pt-title h3 {
+  margin: 16px 0 0 0;
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+.pt-cuisinespage .pt-item:hover {
+  box-shadow: 0 0 0 4px #fff, 0 0 0 7px #ff9f0e;
+}
+.pt-cuisinespage .pt-item:hover img {
+  filter: blur(2px);
+}
+.pt-cuisinespage .pt-item:hover h3 {
+  font-size: 20px;
+  margin-top: 14px;
+}
+.pt-cuisinespage .pt-footer {
+  margin-top: 48px;
+}
+
+.pt-restaurantpage .pt-footer,
+.pt-myorderspage .pt-footer,
+.pt-cartpage .pt-footer {
+  margin-top: 96px;
+}
+.pt-restaurantpage .pt-cart-body,
+.pt-myorderspage .pt-cart-body,
+.pt-cartpage .pt-cart-body {
+  border-radius: 10px;
+  box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.07);
+  margin: 0 0 16px 0;
+  position: relative;
+  background: #fff;
+  padding: 24px;
+}
+.pt-restaurantpage .pt-cart-body:last-of-type,
+.pt-myorderspage .pt-cart-body:last-of-type,
+.pt-cartpage .pt-cart-body:last-of-type {
+  margin-bottom: 0;
+}
+.pt-restaurantpage .pt-cart-body .pt-dtable,
+.pt-myorderspage .pt-cart-body .pt-dtable,
+.pt-cartpage .pt-cart-body .pt-dtable {
+  height: 98px;
+}
+.pt-restaurantpage .pt-cart-body .pt-thumb,
+.pt-myorderspage .pt-cart-body .pt-thumb,
+.pt-cartpage .pt-cart-body .pt-thumb {
+  width: 98px;
+  height: 98px;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-right: 24px;
+}
+.pt-restaurantpage .pt-cart-body .pt-thumb img,
+.pt-myorderspage .pt-cart-body .pt-thumb img,
+.pt-cartpage .pt-cart-body .pt-thumb img {
+  width: 100%;
+  min-height: 100%;
+}
+.pt-restaurantpage .pt-cart-body p,
+.pt-myorderspage .pt-cart-body p,
+.pt-cartpage .pt-cart-body p {
+  width: 60%;
+  overflow: hidden;
+  height: 22px;
+}
+.pt-restaurantpage .pt-cart-body h3,
+.pt-myorderspage .pt-cart-body h3,
+.pt-cartpage .pt-cart-body h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+.pt-restaurantpage .pt-cart-body h3 a,
+.pt-myorderspage .pt-cart-body h3 a,
+.pt-cartpage .pt-cart-body h3 a {
+  color: #333;
+  font-family: "Raleway";
+}
+.pt-restaurantpage .pt-cart-body .pt-extra small,
+.pt-myorderspage .pt-cart-body .pt-extra small,
+.pt-cartpage .pt-cart-body .pt-extra small {
+  font-size: 12px;
+  color: #999;
+  font-family: "Raleway";
+  margin-bottom: -5px;
+  display: table;
+}
+.pt-restaurantpage .pt-cart-body .pt-extra strong,
+.pt-myorderspage .pt-cart-body .pt-extra strong,
+.pt-cartpage .pt-cart-body .pt-extra strong {
+  font-weight: 600;
+  font-size: 12px;
+  color: #999;
+  font-family: "Raleway";
+}
+.pt-restaurantpage .pt-cart-body .pt-extra strong a,
+.pt-myorderspage .pt-cart-body .pt-extra strong a,
+.pt-cartpage .pt-cart-body .pt-extra strong a {
+  color: #ff9f0e;
+  font-family: "Raleway";
+}
+.pt-restaurantpage .pt-cart-body .pt-extra span,
+.pt-myorderspage .pt-cart-body .pt-extra span,
+.pt-cartpage .pt-cart-body .pt-extra span {
+  display: inline-block;
+  background: #fff9f1;
+  font-size: 10px;
+  border-radius: 4px;
+  margin-right: 8px;
+  color: #ff9f0e;
+  font-family: "Raleway";
+  font-weight: 600;
+  padding: 0px 8px;
+  padding-right: 12px;
+  line-height: 22px;
+  position: relative;
+}
+.pt-restaurantpage .pt-cart-body .pt-extra span i,
+.pt-myorderspage .pt-cart-body .pt-extra span i,
+.pt-cartpage .pt-cart-body .pt-extra span i {
+  display: inline-block;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: -6px;
+  top: 5px;
+  background: #ffb8b8;
+  color: #ce1818;
+}
+.pt-restaurantpage .pt-cart-body .pt-extra span b,
+.pt-myorderspage .pt-cart-body .pt-extra span b,
+.pt-cartpage .pt-cart-body .pt-extra span b {
+  background: #fff;
+  display: inline-block;
+  padding: 0 6px;
+  height: 18px;
+  line-height: 18px;
+  border-radius: 20px;
+  margin-top: 3px;
+  margin-left: 3px;
+  color: #2ecc71;
+}
+.pt-restaurantpage .pt-cart-body .pt-options,
+.pt-myorderspage .pt-cart-body .pt-options,
+.pt-cartpage .pt-cart-body .pt-options {
+  position: absolute;
+  right: 24px;
+  top: 58px;
+}
+.pt-restaurantpage .pt-cart-body .pt-options a,
+.pt-myorderspage .pt-cart-body .pt-options a,
+.pt-cartpage .pt-cart-body .pt-options a {
+  float: right;
+  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 4px;
+  background: #ff9f0e;
+  color: #fff;
+  margin-left: 12px;
+  box-shadow: 0 3px 10px rgba(255, 159, 14, 0.5);
+}
+.pt-restaurantpage .pt-cart-body .pt-options .pt-quantity,
+.pt-myorderspage .pt-cart-body .pt-options .pt-quantity,
+.pt-cartpage .pt-cart-body .pt-options .pt-quantity {
+  position: relative;
+  margin-bottom: 12px;
+  float: right;
+}
+.pt-restaurantpage .pt-cart-body .pt-options .pt-quantity i,
+.pt-myorderspage .pt-cart-body .pt-options .pt-quantity i,
+.pt-cartpage .pt-cart-body .pt-options .pt-quantity i {
+  display: inline-block;
+  position: relative;
+  font-size: 10px;
+  margin-top: 9px;
+}
+.pt-restaurantpage .pt-cart-body .pt-options .pt-quantity i.pt-plus,
+.pt-myorderspage .pt-cart-body .pt-options .pt-quantity i.pt-plus,
+.pt-cartpage .pt-cart-body .pt-options .pt-quantity i.pt-plus {
+  margin-left: -26px;
+  margin-right: 6px;
+  border-left: 1px solid #eee;
+  padding-left: 6px;
+  float: right;
+}
+.pt-restaurantpage .pt-cart-body .pt-options .pt-quantity i.pt-minus,
+.pt-myorderspage .pt-cart-body .pt-options .pt-quantity i.pt-minus,
+.pt-cartpage .pt-cart-body .pt-options .pt-quantity i.pt-minus {
+  margin-right: -26px;
+  margin-left: 6px;
+  border-right: 1px solid #eee;
+  padding-right: 6px;
+  float: left;
+}
+.pt-restaurantpage .pt-cart-body .pt-options .pt-quantity input,
+.pt-myorderspage .pt-cart-body .pt-options .pt-quantity input,
+.pt-cartpage .pt-cart-body .pt-options .pt-quantity input {
+  width: 72px;
+  height: 22px;
+  text-align: center;
+}
+.pt-restaurantpage #checkout #payment-form,
+.pt-myorderspage #checkout #payment-form,
+.pt-cartpage #checkout #payment-form {
+  margin: 0 -16px;
+  padding: 20px 16px 16px;
+  border-radius: 4px;
+  border: 1px solid #ffe0b6;
+  padding-bottom: 100px;
+}
+.pt-restaurantpage #checkout #payment-form .fieldset,
+.pt-myorderspage #checkout #payment-form .fieldset,
+.pt-cartpage #checkout #payment-form .fieldset {
+  box-shadow: 0 1px 3px 0 rgba(50, 50, 93, 0.1),
+    0 4px 6px 0 rgba(112, 157, 199, 0.1);
+  border-radius: 4px;
+  padding: 8px;
+}
+.pt-restaurantpage #checkout #payment-form h2,
+.pt-myorderspage #checkout #payment-form h2,
+.pt-cartpage #checkout #payment-form h2 {
+  margin: 15px 0;
+  letter-spacing: 0.3px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+  padding: 0 6px 10px 6px;
+}
+.pt-restaurantpage #checkout #payment-form .field,
+.pt-myorderspage #checkout #payment-form .field,
+.pt-cartpage #checkout #payment-form .field {
+  flex: 1;
+  padding: 0 15px;
+  background: transparent;
+  font-weight: 400;
+  color: #31325f;
+  outline: none;
+  cursor: text;
+}
+.pt-restaurantpage #checkout #payment-form .fieldset p,
+.pt-myorderspage #checkout #payment-form .fieldset p,
+.pt-cartpage #checkout #payment-form .fieldset p {
+  width: 100%;
+  padding: 0 12px;
+}
+.pt-restaurantpage #checkout #payment-form .fieldset hr,
+.pt-myorderspage #checkout #payment-form .fieldset hr,
+.pt-cartpage #checkout #payment-form .fieldset hr {
+  border-color: #eee;
+}
+.pt-restaurantpage #checkout #payment-form label.label,
+.pt-myorderspage #checkout #payment-form label.label,
+.pt-cartpage #checkout #payment-form label.label {
+  border-bottom: 1px solid #f7f7f7;
+  padding: 6px 0;
+}
+.pt-restaurantpage #checkout #payment-form label.label span,
+.pt-myorderspage #checkout #payment-form label.label span,
+.pt-cartpage #checkout #payment-form label.label span {
+  width: 88px;
+  display: inline-block;
+  font-family: "Raleway";
+  font-weight: 500;
+  text-align: right;
+}
+.pt-restaurantpage #checkout #payment-form label.label:last-of-type,
+.pt-myorderspage #checkout #payment-form label.label:last-of-type,
+.pt-cartpage #checkout #payment-form label.label:last-of-type {
+  border: 0;
+}
+.pt-restaurantpage #checkout #payment-form input,
+.pt-restaurantpage #checkout #payment-form .bootstrap-select .btn,
+.pt-myorderspage #checkout #payment-form input,
+.pt-myorderspage #checkout #payment-form .bootstrap-select .btn,
+.pt-cartpage #checkout #payment-form input,
+.pt-cartpage #checkout #payment-form .bootstrap-select .btn {
+  flex: 1;
+  border-style: none;
+  outline: none;
+  color: #313b3f;
+  width: auto;
+  height: 25px;
+  padding: 0;
+}
+.pt-restaurantpage #checkout #payment-form #country,
+.pt-restaurantpage #checkout #payment-form #gender,
+.pt-myorderspage #checkout #payment-form #country,
+.pt-myorderspage #checkout #payment-form #gender,
+.pt-cartpage #checkout #payment-form #country,
+.pt-cartpage #checkout #payment-form #gender {
+  display: inline-block;
+  align-items: center;
+  width: 180px;
+}
+.pt-restaurantpage #checkout #payment-form button.payment-button,
+.pt-myorderspage #checkout #payment-form button.payment-button,
+.pt-cartpage #checkout #payment-form button.payment-button {
+  display: block;
+  background: #ff9f0e;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  border: 0;
+  font-weight: 700;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-top: 24px;
+  font-family: "Raleway";
+}
+.pt-restaurantpage #checkout #payment-form button.payment-button:hover,
+.pt-myorderspage #checkout #payment-form button.payment-button:hover,
+.pt-cartpage #checkout #payment-form button.payment-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px 0 rgba(50, 50, 93, 0.1),
+    0 3px 6px 0 rgba(0, 0, 0, 0.08);
+}
+.pt-restaurantpage .box,
+.pt-myorderspage .box,
+.pt-cartpage .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.pt-restaurantpage .paypal-logo,
+.pt-myorderspage .paypal-logo,
+.pt-cartpage .paypal-logo {
+  font-family: Verdana, Tahoma;
+  font-weight: bold;
+  font-size: 26px;
+}
+.pt-restaurantpage .paypal-logo i:first-child,
+.pt-myorderspage .paypal-logo i:first-child,
+.pt-cartpage .paypal-logo i:first-child {
+  color: #253b80;
+}
+.pt-restaurantpage .paypal-logo i:last-child,
+.pt-myorderspage .paypal-logo i:last-child,
+.pt-cartpage .paypal-logo i:last-child {
+  color: #179bd7;
+}
+.pt-restaurantpage .paypal-button,
+.pt-myorderspage .paypal-button,
+.pt-cartpage .paypal-button {
+  padding: 4px 30px;
+  border: 1px solid #ff9933;
+  border-radius: 55px;
+  background-image: linear-gradient(#fff0a8, #f9b421);
+  background: #ffc439;
+  margin: 0 auto;
+  display: block;
+  min-width: 138px;
+  position: relative;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: table;
+  margin: 0 auto;
+  margin-top: -72px;
+  margin-bottom: 16px;
+  transition: all 0.15s ease;
+}
+.pt-restaurantpage .paypal-button-title,
+.pt-myorderspage .paypal-button-title,
+.pt-cartpage .paypal-button-title {
+  font-size: 14px;
+  color: #505050;
+  font-weight: 700;
+  font-family: "Raleway";
+  vertical-align: baseline;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+}
+.pt-restaurantpage .paypal-button .paypal-logo,
+.pt-myorderspage .paypal-button .paypal-logo,
+.pt-cartpage .paypal-button .paypal-logo {
+  display: inline-block;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+}
+.pt-restaurantpage .paypal-button:hover,
+.pt-myorderspage .paypal-button:hover,
+.pt-cartpage .paypal-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px 0 rgba(50, 50, 93, 0.1),
+    0 3px 6px 0 rgba(0, 0, 0, 0.08);
+}
+.pt-planspage .pt-plans {
+  padding: 22px 10px;
+}
+.pt-planspage .pt-plans .pt-plan {
+  text-align: center;
+  padding: 12px 6px;
+  box-shadow: 0 0 9px #eee;
+  border-radius: 10px;
+  transition: all 0.4s;
+  padding-top: 48px;
+}
+.pt-planspage .pt-plans .pt-plan h6 {
+  font-size: 48px;
+}
+.pt-planspage .pt-plans .pt-plan h6 b {
+  font-family: "Raleway";
+}
+.pt-planspage .pt-plans .pt-plan h6 span {
+  vertical-align: super;
+  font-size: 22px;
+  font-family: "Raleway";
+}
+.pt-planspage .pt-plans .pt-plan button {
+  border: 0;
+  border-radius: 50px;
+  background: #ff9f0e;
+  color: #fff;
+  height: 44px;
+  line-height: 44px;
+  font-family: "Raleway";
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 3px 9px rgba(214, 133, 9, 0.43);
+  padding: 0 32px;
+}
+.pt-planspage .pt-plans .pt-plan ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 48px;
+}
+.pt-planspage .pt-plans .pt-plan ul li {
+  position: relative;
+  margin-bottom: 2px;
+  padding: 8px;
+  padding-left: 16px;
+  border-radius: 30px;
+  font-size: 13px;
+  text-align: left;
+}
+.pt-planspage .pt-plans .pt-plan ul li span {
+  position: absolute;
+  right: 12px;
+  border-radius: 50%;
+  background: #fff;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  top: 10px;
+  font-size: 10px;
+}
+.pt-planspage .pt-plans .pt-plan ul li.alert-success span {
+  box-shadow: 0 0 0 3px #f0fdf3, 0 0 0 5px #fff;
+}
+.pt-planspage .pt-plans .pt-plan:hover {
+  background: #fff;
+  transform: scale(1.03);
+}
+.pt-planspage .pt-plans .col:nth-of-type(3) {
+  color: #fff;
+}
+.pt-planspage .pt-plans .col:nth-of-type(3) .pt-plan {
+  transform: scale(1.05);
+  background: #ff9f0e;
+}
+.pt-planspage
+  .pt-plans
+  .col:nth-of-type(3)
+  .pt-plan
+  li:not(.alert-success)
+  span {
+  color: #ff9f0e;
+}
+.pt-planspage .pt-plans .col:nth-of-type(3) .pt-plan button {
+  transform: scale(1.1);
+  background: #e98e04;
+}
+.pt-planspage .pt-footer {
+  margin-top: 68px;
+}
+
+.pt-myorderspage .pt-cart-body .pt-color {
+  color: #ff9f0e;
+}
+.pt-myorderspage .pt-cart-body .pt-options a {
+  float: right;
+  font-size: 12px;
+  width: auto;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 4px;
+  background: #ff9f0e;
+  color: #fff;
+  margin-left: 6px;
+  box-shadow: 0 3px 10px rgba(255, 159, 14, 0.5);
+  padding: 0 12px;
+  font-family: "Raleway";
+  font-weight: 700;
+  position: relative;
+}
+.pt-myorderspage .pt-cart-body .pt-options a i {
+  margin-right: 3px;
+}
+.pt-myorderspage .pt-cart-body .pt-options a.tips {
+  padding: 0;
+  width: 32px;
+}
+.pt-myorderspage .pt-cart-body .pt-options a.tips i {
+  margin: 0;
+}
+.pt-myorderspage .pt-cart-body .pt-options a.tips b {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -30px;
+  right: -8px;
+  background: rgba(0, 0, 0, 0.48);
+  font-size: 10px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 8px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.pt-myorderspage .pt-cart-body .pt-options a.tips b:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 24px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.48);
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+.pt-myorderspage .pt-cart-body .pt-options a.tips:hover b {
+  visibility: visible;
+  opacity: 1;
+  bottom: -26px;
+}
+.pt-myorderspage .pt-cart-body .pt-options a.pt-delivered {
+  background: #2ecc71;
+  box-shadow: 0 3px 10px rgba(46, 204, 113, 0.5);
+}
+.pt-myorderspage .pt-cart-body .pt-options a.pt-addinvoice {
+  background: #b864f7;
+  box-shadow: 0 3px 10px rgba(133, 0, 255, 0.5);
+}
+.pt-myorderspage .pt-cart-body .pt-options a.pt-additemreview {
+  background: #fbc531;
+  box-shadow: 0 3px 10px rgba(241, 196, 15, 0.5);
+}
+.pt-myorderspage .pt-cart-body .pt-options a.pt-awaiting {
+  background: #7f8fa6;
+  box-shadow: 0 3px 10px rgba(127, 143, 166, 0.5);
+}
+
+.pt-restaurantpage .pt-resaurant {
+  position: relative;
+}
+.pt-restaurantpage .pt-footer {
+  margin-top: 96px;
+}
+.pt-restaurantpage .pt-cart-body {
+  border-radius: 10px;
+  box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.07);
+  margin: 0 0 16px 0;
+  position: relative;
+  background: #fff;
+  padding: 24px;
+}
+.pt-restaurantpage .pt-cart-body .pt-billing {
+  font-size: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+  margin-top: 4px;
+  color: #666;
+}
+.pt-restaurantpage .pt-cart-body .pt-options {
+  top: 75px;
+}
+.pt-restaurantpage .pt-cart-body .pt-options a {
+  float: right;
+  font-size: 12px;
+  width: auto;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 4px;
+  background: #ff9f0e;
+  color: #fff;
+  margin-left: 6px;
+  box-shadow: 0 3px 10px rgba(255, 159, 14, 0.5);
+  padding: 0 12px;
+  font-family: "Raleway";
+  font-weight: 700;
+  position: relative;
+}
+.pt-restaurantpage .pt-cart-body .pt-options a i {
+  margin-right: 3px;
+}
+.pt-restaurantpage .pt-cart-body .pt-options a.tips {
+  padding: 0;
+  width: 32px;
+}
+.pt-restaurantpage .pt-cart-body .pt-options a.tips i {
+  margin: 0;
+}
+.pt-restaurantpage .pt-cart-body .pt-options a.tips b {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -30px;
+  right: -8px;
+  background: rgba(0, 0, 0, 0.48);
+  font-size: 10px;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 8px;
+  border-radius: 4px;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.pt-restaurantpage .pt-cart-body .pt-options a.tips b:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 24px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.48);
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+}
+.pt-restaurantpage .pt-cart-body .pt-options a.tips:hover b {
+  visibility: visible;
+  opacity: 1;
+  bottom: -26px;
+}
+.pt-restaurantpage .pt-cart-body .pt-options a.pt-delivered {
+  background: #2ecc71;
+  box-shadow: 0 3px 10px rgba(46, 204, 113, 0.5);
+}
+.pt-restaurantpage .pt-cart-body .pt-options a.pt-intheway {
+  background: #b864f7;
+  box-shadow: 0 3px 10px rgba(133, 0, 255, 0.5);
+}
+.pt-restaurantpage .pt-cart-body .pt-options a.pt-additemreview {
+  background: #fbc531;
+  box-shadow: 0 3px 10px rgba(241, 196, 15, 0.5);
+}
+.pt-restaurantpage .pt-cart-body .pt-options a.pt-awaiting {
+  background: #7f8fa6;
+  box-shadow: 0 3px 10px rgba(127, 143, 166, 0.5);
+}
+.pt-restaurantpage .pt-cart-body h4 {
+  font-size: 18px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #lEEE;
+}
+.pt-restaurantpage .pt-cart-body ul.pt-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pt-restaurantpage .pt-cart-body ul.pt-menu li a {
+  display: block;
+  color: #000;
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  transition: all 0.3s;
+}
+.pt-restaurantpage .pt-cart-body ul.pt-menu li a i {
+  margin-right: 6px;
+}
+.pt-restaurantpage .pt-cart-body ul.pt-menu li a b {
+  background: #ff9f0e;
+  color: #fff;
+  display: inline-block;
+  float: right;
+  width: 20px;
+  height: 20px;
+  line-height: 17px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 10px;
+  font-family: "Raleway";
+  margin-top: 3px;
+  box-shadow: 0 2px 3px rgba(255, 159, 14, 0.5);
+  font-weight: 500;
+}
+.pt-restaurantpage .pt-cart-body ul.pt-menu li a:hover {
+  background: #ffebcc;
+  color: #ba750e;
+  border-color: #ffe6c1;
+  border-radius: 5px;
+}
+.pt-restaurantpage .pt-cart-body ul.pt-menu li:last-of-type a {
+  border-bottom: 0;
+}
+.pt-restaurantpage .pt-resaurants .pt-resaurant {
+  background: #fff;
+  padding: 12px;
+  box-shadow: 1px 6px 14px 0px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  margin-top: 24px;
+}
+.pt-restaurantpage .pt-resaurants .pt-resaurant thead {
+  background: #f7f7f7;
+}
+.pt-restaurantpage .pt-resaurants .pt-resaurant td {
+  font-size: 13px;
+  vertical-align: middle;
+}
+.pt-restaurantpage .pt-resaurants .pt-resaurant .pt-dtable {
+  height: 100px;
+}
+.pt-restaurantpage .pt-resaurants .pt-resaurant .pt-thumb {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.pt-restaurantpage .pt-resaurants .pt-resaurant .pt-thumb img {
+  width: 100%;
+  min-height: 100%;
+}
+.pt-restaurantpage .pt-resaurants .pt-resaurant h3 {
+  font-size: 14px;
+  margin: 5px 0 3px 0;
+}
+.pt-restaurantpage .pt-resaurants .pt-resaurant h3 a {
+  color: #333;
+}
+.pt-restaurantpage .pt-resaurants .pt-resaurant p {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+  line-height: 22px;
+  margin: 0;
+  width: auto;
+}
+.pt-restaurantpage .pt-resaurants .pt-resaurant p span {
+  display: block;
+}
+.pt-restaurantpage .pt-resaurants .pt-resaurant p i {
+  margin-right: 3px;
+  margin-left: 22px;
+}
+.pt-restaurantpage .pt-resaurants .pt-resaurant p i:first-of-type {
+  margin-left: 0;
+}
+.pt-restaurantpage .pt-dot-options {
+  position: relative;
+}
+.pt-restaurantpage .pt-dot-options .pt-options-link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  right: 24px;
+  top: 18px;
+  font-size: 15px;
+  color: #ff9f0e;
+  box-shadow: 0px 1px 6px 0px rgba(42, 43, 74, 0.18);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.pt-restaurantpage .pt-dot-options .pt-options-link.active {
+  background: #ff9f0e;
+  color: #fff;
+  visibility: visible;
+  opacity: 1;
+}
+.pt-restaurantpage .pt-dot-options ul {
+  position: absolute;
+  right: 40px;
+  width: 0px;
+  max-height: 0px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+  padding: 6px;
+  top: 30px;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s, font-size 1s;
+}
+.pt-restaurantpage .pt-dot-options ul li {
+  border-bottom: 1px solid #f4f8fa;
+  transition: all 2s;
+  visibility: hidden;
+  font-size: 0px;
+  opacity: 0;
+}
+.pt-restaurantpage .pt-dot-options ul li:last-child {
+  border-bottom: 0;
+}
+.pt-restaurantpage .pt-dot-options ul li a {
+  display: block;
+  padding: 6px;
+  color: #888;
+  font-size: 0px;
+  transition: all 0.4s;
+}
+.pt-restaurantpage .pt-dot-options ul li a:hover {
+  color: #ff9f0e;
+}
+.pt-restaurantpage .pt-dot-options ul.open {
+  visibility: visible;
+  opacity: 1;
+  right: 40px;
+  top: 30px;
+  width: 102px;
+  max-height: 238px;
+}
+.pt-restaurantpage .pt-dot-options ul.open li {
+  visibility: visible;
+  opacity: 1;
+  font-size: 12px;
+}
+.pt-restaurantpage .pt-dot-options ul.open li a {
+  font-size: 12px;
+}
+.pt-restaurantpage .pt-dot-options ul.open li a i,
+.pt-restaurantpage .pt-dot-options ul.open li a svg {
+  margin-right: 6px;
+}
+.pt-restaurantpage tr:nth-last-child(-n + 4) .pt-dot-options ul {
+  top: auto;
+  bottom: 30px;
+}
+.pt-restaurantpage tr:nth-last-child(-n + 4) .pt-dot-options ul .open {
+  top: auto;
+  bottom: 30px;
+}
+.pt-restaurantpage tr:hover .pt-options-link {
+  visibility: visible;
+  opacity: 1;
+}
+.pt-restaurantpage .pt-breadcrumb:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.pt-restaurantpage .pt-breadcrumb .pt-title {
+  font-size: 22px;
+  font-family: "Raleway";
+  float: left;
+}
+.pt-restaurantpage .pt-breadcrumb .pt-title i.ic {
+  background: #fff;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  font-size: 18px;
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #f7f7f7, 0 0 0 4px #ff9f0e;
+  margin-right: 12px;
+}
+.pt-restaurantpage .pt-breadcrumb .pt-options {
+  float: right;
+  top: 24px;
+}
+.pt-restaurantpage .pt-stats {
+  margin-bottom: 48px;
+}
+.pt-restaurantpage .pt-stats ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pt-restaurantpage .pt-stats ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.pt-restaurantpage .pt-stats ul li {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+  background: #f7f7f7;
+  height: 70px;
+  border-radius: 55px;
+  position: relative;
+  overflow: hidden;
+  padding: 0 28px;
+  color: #fff;
+}
+.pt-restaurantpage .pt-stats ul li:last-of-type {
+  margin: 0;
+}
+.pt-restaurantpage .pt-stats ul li b {
+  display: inline-block;
+  font-family: "Raleway";
+  letter-spacing: 1.5px;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 6px 0px 3px;
+}
+.pt-restaurantpage .pt-stats ul li em {
+  display: block;
+  font-family: "Raleway";
+  font-size: 24px;
+  font-weight: 700;
+  font-style: normal;
+}
+.pt-restaurantpage .pt-stats ul li:nth-of-type(3) {
+  background: #6c5ce7;
+  box-shadow: 0 3px 15px rgba(108, 92, 231, 0.5);
+}
+.pt-restaurantpage .pt-stats ul li:nth-of-type(2) {
+  background: #00cec9;
+  box-shadow: 0 3px 15px rgba(0, 206, 201, 0.5);
+}
+.pt-restaurantpage .pt-stats ul li:nth-of-type(4) {
+  background: #e84393;
+  box-shadow: 0 3px 15px rgba(232, 67, 147, 0.5);
+}
+.pt-restaurantpage .pt-stats ul li:nth-of-type(1) {
+  background: #fdcb6e;
+  box-shadow: 0 3px 15px rgba(253, 203, 110, 0.5);
+}
+.pt-restaurantpage .pt-shortstats:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.pt-restaurantpage .pt-shortstats h3 {
+  margin-bottom: 16px !important;
+  padding-bottom: 12px !important;
+  border-bottom: 1px solid #f7f7f7;
+  margin-top: 24px !important;
+}
+.pt-restaurantpage .pt-shortstats .pt-box {
+  box-shadow: 0 3px 10px #eee;
+  padding: 24px;
+  border-radius: 10px;
+  float: left;
+  width: 48%;
+  margin-right: 2%;
+  margin-bottom: 12px;
+}
+.pt-restaurantpage .pt-shortstats .pt-box b {
+  font-size: 22px;
+}
+.pt-restaurantpage .pt-shortstats .pt-box h6 {
+  font-weight: 400;
+}
+.pt-restaurantpage hr {
+  box-shadow: 0 3px 10px #00000047;
+  border-color: #eee;
+  margin: 0;
+  margin-bottom: 48px;
+}
+.pt-restaurantpage .pt-restohead .pt-thumb {
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  box-shadow: 0px 8px 14px 0px rgba(0, 0, 0, 0.23);
+  margin: 0 auto 24px auto;
+  position: relative;
+  margin-right: 24px;
+}
+.pt-restaurantpage .pt-restohead .pt-thumb:before {
+  content: "";
+  position: absolute;
+  width: 106px;
+  height: 106px;
+  left: -4px;
+  top: -4px;
+  border-radius: 50%;
+  border: 2px solid #ff9f0e;
+}
+.pt-restaurantpage .pt-restohead .pt-thumb img {
+  width: 100%;
+  border-radius: 50%;
+}
+.pt-restaurantpage .pt-restohead .pt-dtable {
+  height: 98px;
+}
+.pt-restaurantpage .pt-restohead .pt-stars {
+  color: #ff9f0e;
+  margin: 4px 0 10px 0;
+}
+.pt-restaurantpage .pt-restohead .pt-stars b {
+  font-family: Raleway;
+  margin-left: 5px;
+  color: #2c2c2c;
+  font-weight: 400;
+}
+.pt-restaurantpage .pt-reviews {
+  font-size: 12px;
+}
+.pt-restaurantpage .pt-reviews .float-left {
+  font-size: 14px;
+}
+.pt-restaurantpage .pt-reviews .float-right {
+  color: #777;
+}
+.pt-restaurantpage .pt-reviews i {
+  color: #ff9f0e;
+}
+.pt-restaurantpage .pt-reviews p {
+  overflow: initial;
+  height: initial;
+  margin: 16px !important;
+  font-size: 14px !important;
+}
+.pt-restaurantpage td .pt-stars {
+  color: #ff9f0e;
+  font-size: 10px;
+  margin-top: -3px;
+}
+.pt-restaurantpage td .pt-stars b {
+  font-family: Raleway;
+  margin-left: 5px;
+  font-weight: 400;
+}
+.pt-restaurantpage #senditem .pt-addSize,
+.pt-restaurantpage #senditem .pt-addExtra {
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
+  padding: 0 8px 8px;
+}
+.pt-restaurantpage #senditem .pt-addSize i,
+.pt-restaurantpage #senditem .pt-addExtra i {
+  float: right;
+  color: #2ecc71;
+  cursor: pointer;
+}
+.pt-restaurantpage #senditem .pt-removeSize,
+.pt-restaurantpage #senditem .pt-removeExtra {
+  float: right;
+  color: #f54c4c;
+  margin-top: -28px;
+  margin-right: 8px;
+  position: relative;
+  cursor: pointer;
+}
+.pt-restaurantpage #senditem .pt-imginp {
+  position: relative;
+}
+.pt-restaurantpage #senditem .pt-imginp input {
+  width: 95%;
+}
+.pt-restaurantpage #senditem .file-upload .file-select {
+  margin: 5px 0;
+  border-radius: 0 5px 5px 0;
+  position: absolute;
+  bottom: -5px;
+  right: 0px;
+  height: 44px;
+  border-color: #ef9f25;
+  line-height: 22px;
+  background: #ff9f0e;
+}
+.pt-restaurantpage #senditem .file-upload .file-select .file-select-button {
+  height: 40px;
+  line-height: 37px;
+  padding: 0;
+  text-align: center;
+  width: 40px;
+  background: #ff9f0e;
+  font-size: 14px;
+  color: #ffffff;
+}
+.pt-restaurantpage #senditem .thumbnails {
+  position: absolute;
+  bottom: 8px;
+  right: 52px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+.pt-restaurantpage #senditem .thumbnails img {
+  width: 100% !important;
+  height: 100% !important;
+  left: 0 !important;
+}
+.pt-restaurantpage #senditem .thumbnails div[data-upload-status="uploading"] {
+  width: 100% !important;
+  height: 100% !important;
+}
+.pt-restaurantpage
+  #senditem
+  .thumbnails
+  div[data-upload-status="uploading"]
+  .progress {
+  border-radius: 0;
+  margin: 0;
+}
+.pt-restaurantpage
+  #senditem
+  .thumbnails
+  div[data-upload-status="uploading"]
+  .progress
+  div {
+  background: #3be938;
+  display: block;
+  margin: 0;
+  height: 3px;
+  position: relative;
+}
+
+.pt-userdetailspage .pt-footer {
+  margin-top: 96px;
+}
+.pt-userdetailspage .pt-userdetails {
+  width: 600px;
+  margin: auto;
+  box-shadow: 0 0 10px #eee;
+  padding: 20px;
+}
+.pt-userdetailspage .pt-userdetails #thumbnails {
+  background: #f7f7f7;
+  margin: 12px 0;
+  border-radius: 3px;
+  display: table;
+  padding: 12px;
+}
+.pt-userdetailspage .pt-userdetails #thumbnails .nophoto {
+  width: 150px;
+  height: 150px;
+}
+
+.bg-v {
+  background: #b864f7 !important;
+  box-shadow: 0 3px 10px rgba(133, 0, 255, 0.5) !important;
+}
+
+.bg-gr {
+  background: #2ecc71 !important;
+  box-shadow: 0 3px 10px rgba(46, 204, 113, 0.5) !important;
+}
+
+.bg-gy {
+  background: #7f8fa6 !important;
+  box-shadow: 0 3px 10px rgba(127, 143, 166, 0.5) !important;
+}
+
+.bg-o {
+  background: #ff9f0e !important;
+  box-shadow: 0 3px 10px rgba(255, 159, 14, 0.5) !important;
+}
+
+.bg-r {
+  background: #e74a4a !important;
+  box-shadow: 0 3px 10px rgba(231, 74, 74, 0.5) !important;
+}
+
+.pt-response-planpage #loading,
+.pt-responsepage #loading {
+  display: table;
+  margin: 68px auto;
+  text-align: center;
+  box-shadow: 0 0 10px #eee;
+  padding: 48px;
+  border-radius: 10px;
+  min-width: 300px;
+}
+.pt-response-planpage #loading i,
+.pt-responsepage #loading i {
+  font-size: 52px;
+}
+.pt-response-planpage #loading h3,
+.pt-responsepage #loading h3 {
+  font-size: 22px;
+  margin: 32px 0 0;
+}
+
+.pt-pagespage .pt-dtable {
+  margin: auto;
+  height: 65px;
+}
+.pt-pagespage .pt-box {
+  background: #fff;
+  padding: 48px;
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.06);
+  margin-bottom: 32px;
+  border-radius: 10px;
+  margin-bottom: 48px;
+}
+
+.table-responsive {
+  overflow-y: hidden;
+}
+
+.StripeElement {
+  background-color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+@media only screen and (max-width: 700px) {
+  .pt-header-top .pt-menu ul li {
+    display: none;
+  }
+  .pt-header-top .pt-menu ul li .pt-drop li {
+    display: block;
+  }
+
+  .pt-header-top .pt-menu ul li.pt-mobile-menu,
+  .pt-header-top .pt-menu ul li.pt-img,
+  .pt-header-top .pt-menu ul li.pt-author,
+  .pt-header-top .pt-menu ul li.pt-cart,
+  .pt-header-top .pt-menu ul li.pt-login {
+    display: inline-block;
+  }
+
+  .pt-header-top .pt-menu ul li.pt-author .pt-showmenudetails {
+    font-size: 0;
+  }
+  .pt-header-top .pt-menu ul li.pt-author .pt-showmenudetails i {
+    font-size: 14px;
+  }
+
+  .pt-header-top .pt-menu ul li.pt-login a {
+    font-size: 0;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+  }
+  .pt-header-top .pt-menu ul li.pt-login a i {
+    font-size: 13px;
+    margin-right: 0px;
+  }
+
+  .pt-header-content .pt-body {
+    width: 100%;
+    padding-top: 48px;
+  }
+  .pt-header-content .pt-body h1 {
+    font-size: 28px;
+  }
+  .pt-header-content .pt-body p {
+    margin: 12px 0 24px;
+  }
+  .pt-header-content .pt-body a {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+    background: #fff;
+    color: #ff9f0e;
+  }
+  .pt-header-content .pt-body .pt-info {
+    margin-top: 268px;
+  }
+  .pt-header-content .pt-body .pt-info div {
+    float: none;
+    width: 100%;
+    margin-left: 0px;
+    padding: 12px;
+  }
+  .pt-header-content .pt-thumb img {
+    width: 320px;
+    right: 10px;
+    top: 280px;
+  }
+  .pt-header-content .pt-thumb .pt-bg {
+    height: 520px;
+  }
+
+  .pt-section-title {
+    width: 100%;
+  }
+  .pt-section-title h3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .pt-section-title p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .pt-section {
+    margin: 82px 0;
+  }
+  .pt-section .col-4 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .pt-section .pt-testimonials .pt-item {
+    width: 100%;
+    padding: 48px 12px;
+  }
+
+  .pt-section .pt-testimonials .owl-nav {
+    top: 23%;
+  }
+
+  .pt-section .pt-testimonials .owl-nav .owl-prev,
+  .pt-section .pt-testimonials .owl-nav .owl-next {
+    width: 28px;
+    height: 28px;
+  }
+  .pt-section .pt-testimonials .owl-nav .owl-prev span,
+  .pt-section .pt-testimonials .owl-nav .owl-next span {
+    height: 28px;
+    line-height: 20px;
+  }
+
+  .pt-section .pt-subscribe .pt-input {
+    width: 100%;
+  }
+  .pt-section .pt-subscribe .pt-input button {
+    padding: 15px 24px;
+  }
+
+  .pt-footer {
+    padding: 12px 0 28px 0;
+  }
+  .pt-footer .col-6,
+  .pt-footer .col-3 {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .pt-footer .pt-links {
+    margin-top: 38px;
+  }
+
+  .pt-pagespage .pt-box {
+    padding: 12px;
+  }
+  .pt-pagespage .pt-box img,
+  .pt-pagespage .pt-box iframe {
+    max-width: 100%;
+  }
+
+  .pt-header-top .pt-bg {
+    width: 190px;
+  }
+  .pt-header-top .pt-bg:before {
+    left: -20px;
+    width: 328px;
+  }
+
+  .pt-cartpage .col-8,
+  .pt-cartpage .col-4 {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .pt-cartpage .pt-cart-body {
+    margin-bottom: 12px !important;
+  }
+  .pt-cartpage .pt-footer {
+    margin-top: 64px;
+  }
+
+  .pt-restaurantpage #checkout #payment-form label.label span,
+  .pt-myorderspage #checkout #payment-form label.label span,
+  .pt-cartpage #checkout #payment-form label.label span {
+    width: 70px;
+  }
+
+  .pt-restaurantpage .pt-cart-body .pt-thumb,
+  .pt-myorderspage .pt-cart-body .pt-thumb,
+  .pt-cartpage .pt-cart-body .pt-thumb {
+    width: 44px;
+    height: 44px;
+  }
+
+  .pt-restaurantpage .pt-cart-body h3,
+  .pt-myorderspage .pt-cart-body h3,
+  .pt-cartpage .pt-cart-body h3 {
+    font-size: 14px;
+  }
+
+  .pt-restaurantpage .pt-cart-body .pt-extra strong,
+  .pt-myorderspage .pt-cart-body .pt-extra strong,
+  .pt-cartpage .pt-cart-body .pt-extra strong {
+    font-size: 10px;
+    display: block;
+  }
+
+  .pt-restaurantpage .pt-cart-body .pt-options,
+  .pt-myorderspage .pt-cart-body .pt-options,
+  .pt-cartpage .pt-cart-body .pt-options {
+    position: relative;
+    right: 0px;
+    top: 12px;
+  }
+
+  .pt-userdetailspage .pt-userdetails {
+    width: 100%;
+  }
+  .pt-userdetailspage .pt-footer {
+    margin-top: 64px;
+  }
+
+  #pt-getmodalitem .media {
+    display: block;
+  }
+  #pt-getmodalitem .table td:last-of-type {
+    white-space: nowrap;
+  }
+
+  #senditemtocart .pt-thumb {
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+
+  #senditemtocart .pt-price-det .pt-price {
+    margin: 16px 6px 0 6px;
+  }
+
+  #senditemtocart .pt-price-det .pt-price,
+  #senditemtocart .pt-price-det .pt-reduce {
+    font-size: 16px;
+    width: 84px;
+  }
+
+  #senditemtocart .pt-price-det button {
+    width: 94px;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .pt-cuisinespage .col-4,
+  .pt-cuisinespage .col-8,
+  .pt-cuisinespage .col-3,
+  .pt-restaurantpage .col-4,
+  .pt-restaurantpage .col-8,
+  .pt-restaurantpage .col-3,
+  .pt-restaurantspage .col-4,
+  .pt-restaurantspage .col-8,
+  .pt-restaurantspage .col-3 {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .pt-cuisinespage .pt-footer,
+  .pt-restaurantpage .pt-footer,
+  .pt-restaurantspage .pt-footer {
+    margin-top: 64px;
+  }
+
+  .pt-restaurantpage .pt-cart-body:last-of-type {
+    margin-bottom: 24px;
+  }
+  .pt-restaurantpage .w-60 {
+    width: 100%;
+  }
+  .pt-restaurantpage .pt-stats ul li {
+    float: none;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  .pt-restaurantspage .pt-restaurants .pt-restaurant-sidebar {
+    margin-right: 0;
+  }
+
+  .pt-restaurantspage .pt-restaurant-body {
+    padding: 24px 8px;
+  }
+
+  .pt-restaurantspage
+    .pt-restaurant-body
+    .pt-resaurant
+    .pt-resaurant
+    .pt-options {
+    position: relative;
+    top: 6px;
+    right: 0;
+    display: table;
+    margin: 0 0 0 auto;
+  }
+
+  .pt-restaurantspage .pt-restaurant-body .pt-resaurant .pt-resaurant p {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

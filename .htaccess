@@ -1,0 +1,32 @@
+RewriteEngine On
+
+RewriteRule ^restaurants/([0-9]+)/([0-9a-zA-z]+) restaurants.php?id=$1&t=$2 [NC,L]
+RewriteRule ^restaurants restaurants.php [NC,L]
+
+RewriteRule ^cuisines/([0-9]+)/([0-9a-zA-z]+) cuisines.php?id=$1&t=$2 [NC,L]
+RewriteRule ^cuisines cuisines.php [NC,L]
+
+RewriteRule ^pages/([0-9]+)/([0-9a-zA-z]+) pages.php?id=$1&t=$2 [NC,L]
+RewriteRule ^plans plans.php [NC,L]
+RewriteRule ^cart cart.php [NC,L]
+RewriteRule ^myorders myorders.php [NC,L]
+RewriteRule ^userdetails/([0-9]+) userdetails.php?id=$1 [NC,L]
+RewriteRule ^userdetails userdetails.php [NC,L]
+
+RewriteRule ^restaurant/([a-zA-z]+)/([a-zA-z]+)/([0-9]+) restaurant.php?pg=$1&request=$2&id=$3 [NC,L]
+RewriteRule ^restaurant/([a-zA-z]+)/([a-zA-z]+) restaurant.php?pg=$1&request=$2 [NC,L]
+RewriteRule ^restaurant/([a-zA-z]+) restaurant.php?pg=$1 [NC,L]
+RewriteRule ^restaurant restaurant.php [NC,L]
+
+RewriteRule ^dashboard/([A-Za-z0-9-]+)/page/([0-9-]+) dashboard.php?pg=$1&page=$2 [NC,L]
+RewriteRule ^dashboard/([A-Za-z0-9-]+)/([a-z]+)/([0-9-]+) dashboard.php?pg=$1&request=$2&id=$3 [NC,L]
+RewriteRule ^dashboard/([A-Za-z0-9-]+)/([a-z]+) dashboard.php?pg=$1&request=$2 [NC,L]
+RewriteRule ^dashboard/([A-Za-z0-9-]+) dashboard.php?pg=$1 [NC,L]
+RewriteRule ^dashboard dashboard.php [NC,L]
+
+
+
+#RewriteCond %{HTTPS} !on
+#RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+#RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
